@@ -6,9 +6,12 @@
 
 body {
   display: flex;
+  background-color: #F7F7F7;
   background: radial-gradient(#F7F7F7, #F5F5F5);
   margin: 0;
   padding: 0;
+  height: 100%;
+  overflow: scroll;
 }
 
 li {
@@ -58,7 +61,7 @@ li {
   justify-content: center;
 }
 
-.new-section:after {
+/* .new-section:after {
   width:100%;
   margin-left: 10px;
   display: inline-block;
@@ -67,4 +70,4 @@ li {
   overflow: hidden;
   justify-content: space-around;
   color: black;
-}
+} */
