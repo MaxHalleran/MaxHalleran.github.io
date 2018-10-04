@@ -23,6 +23,10 @@ li {
   margin-top: 10px;
 }
 
+.page-header-aside-img {
+  width: 42%;
+}
+
 .pic-of-me {
   max-width: 100%;
 }
@@ -30,6 +34,7 @@ li {
 .page-header {
   justify-content: center;
   text-align: center;
+  width: 58%;
 }
 
 .page-header p, .page-header .links {
@@ -83,13 +88,32 @@ li {
   justify-content: space-around;
 }
 
-/* .new-section:after {
-  width:100%;
-  margin-left: 10px;
-  display: inline-block;
-  vertical-align: middle;
-  border-bottom: 1px solid;
-  overflow: hidden;
-  justify-content: space-around;
-  color: black;
-} */
+@media only screen and (max-width : 800px) {
+
+  .pic-of-me {
+    display: none;
+    height: 0;
+    width: 0;
+    margin: 0;
+  }
+
+  .page-header-aside-img {
+    display: none;
+    height: 0;
+    width: 0;
+    margin: 0;
+  }
+
+  .page-header {
+    width: 100%;
+  }
+
+  .page-project {
+    flex-basis: auto;
+  }
+
+  .page-project p, .page-project ul {
+    height: 2em;
+  }
+
+}
