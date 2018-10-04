@@ -29,10 +29,16 @@ li {
 
 .page-header {
   justify-content: center;
+  text-align: center;
 }
 
-.page-header p, .page-header ul {
-  font-size: 20px;
+.page-header p, .page-header .links {
+  font-size: 1em;
+}
+
+.page-header .links {
+  text-align: center;
+  justify-content: center;
 }
 
 .page-project {
@@ -50,6 +56,8 @@ li {
 
 .page-project {
   font-size: 90%;
+  justify-content: space-around;
+  text-align: center;
 }
 
 .page-project p {
@@ -58,14 +66,21 @@ li {
 
 .page-project ul {
   height: 30px;
+  padding: 0;
+  margin:0;
+  margin-bottom: 1em;
 }
 
 .page-project a {
   justify-content: center;
 }
 
+.page-project-chattyapp h5 {
+  margin-top: 3px;
+}
+
 .page-footer {
-  justify-content: center;
+  justify-content: space-around;
 }
 
 /* .new-section:after {
