@@ -1,9 +1,5 @@
 @charset "UTF-8";
 
-/* * {
-  border: 1px solid black;
-} */
-
 body {
   display: flex;
   background-color: #F7F7F7;
@@ -12,6 +8,7 @@ body {
   padding: 0;
   height: 100%;
   overflow: scroll;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 li {
