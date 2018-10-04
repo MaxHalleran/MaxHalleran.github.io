@@ -31,30 +31,37 @@ li {
   justify-content: center;
 }
 
-.page-header h1, .page-header h2 {
-
-}
-
-.page-header p {
+.page-header p, .page-header ul {
   font-size: 20px;
-}
-
-.page-header ul {
-  font-size: 20px;
-}
-
-.page-projects {
-  border: 1px solid black;
 }
 
 .page-project {
-  border: 1px solid black;
-  display: inline;
-  /* width: 30%; */
+  display: inline-block;
+  margin: 10px 0;
 }
 
 .page-project-img {
-  max-width: 30%;
+  max-width: 100%;
+}
+
+.page-project h5 {
+  text-align: center;
+}
+
+.page-project {
+  font-size: 90%;
+}
+
+.page-project p {
+  height: 80px;
+}
+
+.page-project ul {
+  height: 30px;
+}
+
+.page-project a {
+  justify-content: center;
 }
 
 .page-footer {
