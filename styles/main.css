@@ -43,6 +43,16 @@ li {
   justify-content: center;
 }
 
+.links a {
+  color: slategrey;
+  text-decoration: none;
+}
+
+.links a:hover {
+  color: black;
+  text-decoration: underline;
+}
+
 .page-project {
   display: inline-block;
   margin: 10px 0;
