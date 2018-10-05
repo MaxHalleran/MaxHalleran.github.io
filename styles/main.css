@@ -53,9 +53,30 @@ li {
   text-decoration: underline;
 }
 
+.new-section h3::after {
+    content: '';
+    display: inline-flex;
+    float: right;
+    padding: 0 4px;
+    width: 75%;
+    border: 1px solid slategrey;
+    margin-top: 20px;
+}
+
 .page-project {
-  display: inline-block;
+  display: inline-grid;
+  grid-template: "head" auto "summary" auto "skills" auto;
+  grid-row-gap: 5px;
   margin: 10px 0;
+  font-size: 90%;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.page-project a {
+  color: slategrey;
+  text-decoration: none;
+  grid-area: head;
 }
 
 .page-project-img {
@@ -66,14 +87,9 @@ li {
   text-align: center;
 }
 
-.page-project {
-  font-size: 90%;
-  justify-content: space-around;
-  text-align: center;
-}
-
 .page-project p {
   height: 80px;
+  grid-area: summary;
 }
 
 .page-project ul {
@@ -81,11 +97,7 @@ li {
   padding: 0;
   margin:0;
   margin-bottom: 1em;
-}
-
-.page-project a {
-  color: slategrey;
-  text-decoration: none;
+  grid-area: skills;
 }
 
 .page-project:hover .page-project-img {
@@ -135,6 +147,10 @@ li {
 
   .page-project p, .page-project ul {
     height: auto;
+  }
+
+  h3::after {
+    width: 50%;
   }
 
 }
