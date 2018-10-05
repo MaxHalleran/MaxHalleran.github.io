@@ -84,7 +84,8 @@ li {
 }
 
 .page-project a {
-  justify-content: center;
+  color: slategrey;
+  text-decoration: none;
 }
 
 .page-project-chattyapp h5 {
