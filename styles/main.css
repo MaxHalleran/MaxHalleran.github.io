@@ -149,8 +149,8 @@ li {
     height: auto;
   }
 
-  h3::after {
-    width: 50%;
+  .new-section h3::after {
+    width: 1%;
   }
 
 }
