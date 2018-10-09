@@ -63,6 +63,11 @@ li {
     margin-top: 20px;
 }
 
+.page-skills p {
+  justify-content: center;
+  text-align: left;
+}
+
 .page-project {
   display: inline-grid;
   grid-template: "head" auto "summary" auto "skills" auto;
@@ -141,8 +146,16 @@ li {
     width: 100%;
   }
 
+  .page-skills p {
+    text-align: center;
+  }
+
   .page-project {
     flex-basis: auto;
+  }
+
+  .page-project h5 {
+    margin-top: 10px;
   }
 
   .page-project p, .page-project ul {
