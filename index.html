@@ -9,12 +9,13 @@
     <meta name="author" content="Max Halleran">
     <meta name="theme-color" content="#708090">
 
-    <!-- Ubuntu Font -->
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono|Roboto+Slab" rel="stylesheet">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- Normalize.CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" rel="stylesheet">
 
+    <!-- Personal Stylesheets -->
     <link rel="stylesheet" href="./styles/main.css">
 
     <title>Max Halleran - Full Stack Web Developer</title>
@@ -29,103 +30,82 @@
     <meta name="theme-color" content="#ffffff">
   </head>
   <body>
-    <div class="container main-container page-full">
-      <section class="row">
-        <aside class="col page-header-aside-img">
-          <img class="pic-of-me" src="./docs/Headshot.png">
-        </aside>
-        <div class="col page-header">
-          <h1>Max Halleran</h1>
-          <h3>Web Developer</h2>
-          <p class="summary-text">I'm an eager, detail oriented new web developer with the desire to learn as much as possible while creating worthwhile applications. I love problem solving and writing clean, semantic code.</p>
-          <p class="available-for-text"></p>
-          <section class="container links">
-            <span class="col-4">
-              <a href="mailto:maxhalleran@gmail.com">
-                <!-- <i class="far fa-envelope">
-                  ::before
-                </i> -->
-                MaxHalleran@gmail.com
-              </a>
-            </span>
-            <span class="col-4"><a href="https://github.com/MaxHalleran">GitHub</a></span>
-            <span class="col-4"><a href="https://www.spannkedin.com/in/max-halleran/">LinkdIn</a></span>
-            <span class="col-6"><a href="tel:+14033973901">403-397-3901</a></span>
-            <span class="col-6"><nobr><a href="https://resume.creddle.io/resume/7nop9orvntx">Printable Resume</a></nobr></span>
-          </section>
+    <div class="main-page">
+
+      <div class="main-page-header">
+
+        <div class="main-page-header-name">
+          <h1 class="typewriter-font">Maximillian Halleran</h1>
+        </div>
+
+        <div class="main-page-header-title">
+          <h3 class="typewriter-font">Full Stack JavaScript Web Developer</h3>
+        </div>
+
+      </div>
+
+      <img class="pic-of-me" src="./docs/Headshot.png">
+
+      <p class="summary-text">I'm an eager, detail oriented new web developer with the desire to learn as much as possible while creating worthwhile applications. I love problem solving and writing clean, semantic code.</p>
+
+      <section class="main-page-links">
+        <span><a href="mailto:maxhalleran@gmail.com">MaxHalleran@gmail.com</a></span>
+        <span><a href="https://github.com/MaxHalleran">GitHub</a></span>
+        <span><a href="https://www.spannkedin.com/in/max-halleran/">LinkdIn</a></span>
+        <span><a href="tel:+14033973901">403-397-3901</a></span>
+        <span><nobr><a href="https://resume.creddle.io/resume/7nop9orvntx">Printable Resume</a></nobr></span>
+      </section>
+
+      <section>
+        <div class="new-section page-skills">
+          <h3>Skill Stack</h3>
+          <p>Languages and Frameworks:<br/>
+            <p>Javascript, HTML/CSS/SASS, React, Node.js, JQuery, SQL, MongoDB, BootStrap, Ajax</p>
+          </p>
         </div>
       </section>
-      <main class="container">
-        <div class="row">
-          <div class="col new-section page-skills">
-            <hr/><h3>Skill Stack</h3>
-            <p>Languages and Frameworks:<br/>
-              <p>Javascript, HTML/CSS/SASS, React, Node.js, JQuery, SQL, MongoDB, BootStrap, Ajax</p>
-            </p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col new-section page-projects">
-            <hr/><h3>Projects</h3>
-              <div class="row">
-                <div class="col page-project page-project-chattyapp">
-                  <a href="https://github.com/MaxHalleran/chattyApp"><img class="page-project-img" src="https://github.com/MaxHalleran/chattyApp/blob/master/docs/proper-size-chatty.png?raw=true" alt="a screenshot of chattyApp">
-                  <h5>Chatty App</h5>
-                    <p>A live chat room application that allows multiple users to talk to each other in real time using React and Websockets.</p></a>
-                    <ul>
-                      <li>React,</li>
-                      <li>Websockets,</li>
-                      <li>Express,</li>
-                      <li>SASS</li>
-                    </ul>
-                </div>
-                <div class="col page-project page-project-tweeter">
-                  <a href="https://github.com/MaxHalleran/tweeter"><img class="page-project-img" src="https://github.com/MaxHalleran/tweeter/blob/master/docs/proper-size.png?raw=true" alt="a screenshot of tweeter">
-                  <h5>Tweeter</h5>
-                  <p>A practice project, this one is a twitter clone where users are able to 'twit'.</p></a>
+
+      <!-- <div class="row">
+        <div class="col new-section page-projects">
+          <hr/><h3>Projects</h3>
+            <div class="row">
+              <div class="col page-project page-project-chattyapp">
+                <a href="https://github.com/MaxHalleran/chattyApp"><img class="page-project-img" src="https://github.com/MaxHalleran/chattyApp/blob/master/docs/proper-size-chatty.png?raw=true" alt="a screenshot of chattyApp">
+                <h5>Chatty App</h5>
+                  <p>A live chat room application that allows multiple users to talk to each other in real time using React and Websockets.</p></a>
                   <ul>
-                    <li>MongoDB,</li>
-                    <li>JQuery,</li>
-                    <li>Express</li>
-                  </ul>
-                </div>
-                <div class="col page-project page-project-tinyapp">
-                  <a href="https://github.com/MaxHalleran/tinyApp"><img class="page-project-img" src="https://github.com/MaxHalleran/tinyApp/blob/master/docs/proper-size.png?raw=true" alt="a screenshot of tiny app">
-                  <h5>Tiny App</h5>
-                  <p>A lightweight app that uses RESTful protocols to run a server where a user can create and store shortened urls of their choosing.</p></a>
-                  <ul>
-                    <li>JQuery,</li>
-                    <li>BootStrap,</li>
+                    <li>React,</li>
+                    <li>Websockets,</li>
                     <li>Express,</li>
-                    <li>EJS</li>
+                    <li>SASS</li>
                   </ul>
-
-                </div>
               </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col new-section">
-            <hr/><h3>Education</h3>
-            <div class="education-lighthouse">
-              <h5>Lighthouse Labs</h5>
-              <p><em>August 2018 - present</em></p>
-              <p>A full time immersive 10 week Web Development course covering topics such as Javascript, CSS, HTML, Node.js, React, Ruby, JQuery, MongoDB, SQL, PostgreSQL, Ruby on Rails and RESTful web services.</p><hr/>
+              <div class="col page-project page-project-tweeter">
+                <a href="https://github.com/MaxHalleran/tweeter"><img class="page-project-img" src="https://github.com/MaxHalleran/tweeter/blob/master/docs/proper-size.png?raw=true" alt="a screenshot of tweeter">
+                <h5>Tweeter</h5>
+                <p>A practice project, this one is a twitter clone where users are able to 'twit'.</p></a>
+                <ul>
+                  <li>MongoDB,</li>
+                  <li>JQuery,</li>
+                  <li>Express</li>
+                </ul>
+              </div>
+              <div class="col page-project page-project-tinyapp">
+                <a href="https://github.com/MaxHalleran/tinyApp"><img class="page-project-img" src="https://github.com/MaxHalleran/tinyApp/blob/master/docs/proper-size.png?raw=true" alt="a screenshot of tiny app">
+                <h5>Tiny App</h5>
+                <p>A lightweight app that uses RESTful protocols to run a server where a user can create and store shortened urls of their choosing.</p></a>
+                <ul>
+                  <li>JQuery,</li>
+                  <li>BootStrap,</li>
+                  <li>Express,</li>
+                  <li>EJS</li>
+                </ul>
+
+              </div>
             </div>
-          </div>
         </div>
-      </main>
-      <footer class="row page-footer">
-        <p>Thank you for visiting!</p>
-      </footer>
+      </div> -->
+
     </div>
-
-    <!-- <div class='☯'></div> -->
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script> -->
   </body>
 </html>

@@ -1,0 +1,169 @@
+@charset "UTF-8";
+/*
+body {
+  display: flex;
+  background-color: #F7F7F7;
+  background: radial-gradient(#F7F7F7, #F5F5F5);
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: scroll;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+li {
+  display: inline;
+}
+
+.page-full {
+  max-width: 800px;
+  margin-top: 10px;
+}
+
+.page-header-aside-img {
+  width: 42%;
+}
+
+.pic-of-me {
+  max-width: 100%;
+}
+
+.page-header {
+  justify-content: center;
+  text-align: center;
+  width: 58%;
+}
+
+.page-header p, .page-header .links {
+  font-size: 1em;
+}
+
+.page-header .links {
+  text-align: center;
+  justify-content: center;
+}
+
+.links a {
+  color: slategrey;
+  text-decoration: none;
+}
+
+.links a:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+.new-section h3::after {
+    content: '';
+    display: inline-flex;
+    float: right;
+    padding: 0 4px;
+    width: 75%;
+    border: 1px solid slategrey;
+    margin-top: 20px;
+}
+
+.page-skills p {
+  justify-content: center;
+  text-align: left;
+}
+
+.page-project {
+  display: inline-grid;
+  grid-template: "head" auto "summary" auto "skills" auto;
+  grid-row-gap: 5px;
+  margin: 10px 0;
+  font-size: 90%;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.page-project a {
+  color: slategrey;
+  text-decoration: none;
+  grid-area: head;
+}
+
+.page-project-img {
+  max-width: 100%;
+}
+
+.page-project h5 {
+  text-align: center;
+}
+
+.page-project p {
+  height: 80px;
+  grid-area: summary;
+}
+
+.page-project ul {
+  height: 30px;
+  padding: 0;
+  margin:0;
+  margin-bottom: 1em;
+  grid-area: skills;
+}
+
+.page-project:hover .page-project-img {
+  animation: popout .5s ease-in-out 0s 1 normal forwards;
+}
+
+@keyframes popout {
+  to {
+    transform: translate(0, -5px);
+    -webkit-box-shadow: 0px 5px 5px 3px #7F91A3;
+    box-shadow: 0px 5px 5px 3px #7F91A3;
+  }
+}
+
+.page-project-chattyapp h5 {
+  margin-top: 3px;
+}
+
+.page-footer {
+  justify-content: space-around;
+}
+
+@media only screen and (max-width : 800px) {
+
+  .pic-of-me {
+    display: none;
+    height: 0;
+    width: 0;
+    margin: 0;
+  }
+
+  .page-header-aside-img {
+    display: none;
+    height: 0;
+    width: 0;
+    margin: 0;
+  }
+
+  .page-header {
+    width: 100%;
+  }
+
+  .page-skills p {
+    text-align: center;
+  }
+
+  .page-project {
+    flex-basis: auto;
+  }
+
+  .page-project h5 {
+    margin-top: 10px;
+  }
+
+  .page-project p, .page-project ul {
+    height: auto;
+  }
+
+  .new-section h3::after {
+    width: 1%;
+  }
+
+}
+*/
