@@ -302,10 +302,11 @@ p.page-header-text a:hover {
 */
 
 .footer-container {
-  height: 30vh;
+  height: 35vh;
   border-top: 1.5px solid #4b2c20;
   background: #4b2c20;
   justify-content: center;
+  align-items: center;
 }
 
 .footer {
@@ -313,8 +314,6 @@ p.page-header-text a:hover {
 }
 
 .footer ul {
-  /* border: 1px solid black; */
-
   margin: 5vh 0;
   height: 60%;
 
@@ -340,4 +339,5 @@ p.page-header-text a:hover {
 
 .footer-bottom {
   color: white;
+  justify-content: center;
 }
