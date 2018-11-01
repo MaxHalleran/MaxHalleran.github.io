@@ -4,74 +4,115 @@
   font-family: 'Roboto Mono', monospace;
   font-family: 'Roboto Slab', serif;
   Colors:
-  black: rgb(17, 17, 17);
-  offblack: rgb(59, 58, 58);
+  Primary: #eeeeee
+  P - Light: #ffffff
+  P - Dark: #bcbcbc
+  P - Text: #000000
+  Secondary: #795548
+  S - Light: #a98274
+  S - Dark: #4b2c20
+  S - Text: #ffffff
+  'white': #F5F5F7
+  nav silver: #DEE1E6
+  nav red: #F16860
+  nav orange: #F9BE52
+  nav green: #64C35B
 */
 
-.main-page {
-  background: rgba(240, 240, 240, 0.8);
-  color: rgba(17, 17, 17, 0.8);
-  color: rgba(59, 58, 58, 1);
+/** Page wide effects
+*/
+
+ * {
+   box-sizing: border-box;
+   margin: 0;
+ }
+
+.page {
+  background-color: #eeeeee;
+  color: #000000;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: .13em;
+  line-height: 2;
 }
 
-.main-page-header {
+/** The navbar section
+*/
+
+.navbar {
+  height: 15vh;
+  border-top: 3px solid #795548;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #ffffff;
+  font-size: 1.2em;
+}
+
+.navbar-title .name {
   border: 1px solid black;
 
+  overflow: hidden;
   font-family: 'Roboto Mono', monospace;
-
-  height: 100vh;
-
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  flex-direction: column;
-  overflow: hidden;
-}
-
-.main-page-header-name {
-  margin-left: 10vw;
-}
-
-.main-page-header-title {
-  margin-left: 10vw;
-
-}
-
-.main-page-header h1 {
-  font-size: 5vw;
-
-  animation:
-    typing 2s steps(40, end) 1,
-    blinking .75s step-end 0s infinite normal forwards;
-}
-
-.main-page-header h3 {
-  font-size: 3vw;
-
-  width: 0;
-
-  animation:
-    typing 2s steps(40, end) 2.25s 1 normal forwards,
-    blinking .75s step-end 2.25s infinite normal forwards;
-}
-
-.typewriter-font {
-
-  overflow: hidden;
-  border-right: 5px solid black;
+  display: inline-block;
   white-space: nowrap;
-  margin: 0;
-  letter-spacing: .15em; /* Adjust as needed */
+  animation:
+    typing 1.5s steps(40, end) 1,
+    blinking .75s step-end 0s 5 normal forwards;
+}
+
+.navbar-title .name a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.navbar-title .name a:hover {
+  animation: titleChange 1s ease 0s 1 alternate both;
+}
+
+.navbar-links {
+  /* border: 1px solid black; */
+  height: 100%;
+  justify-content: space-between;
+}
+
+.navbar-links a {
+  text-decoration: none;
+}
+
+.navbar-link {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  /* border: 1px solid black; */
+}
+
+.navbar-link:hover {
+  border-bottom: 3px solid #4b2c20;
+}
+
+.navbar-link-about {
+  color: #4b2c20;
+}
+
+.navbar-link-projects {
+  color: #000000;
+}
+
+a.navbar-link-email {
+  color: #bcbcbc;
+}
+
+a.navbar-link-email:hover {
+  color: #4b2c20;
+
 }
 
 @keyframes typing {
   0% {
     width: 0;
-    border-right: 5px solid black;
+    border-right: 1px solid black;
   }
   100% {
-    border: none;
-    width: 100%
+    width: 19vw;
   }
 }
 
@@ -80,7 +121,223 @@
   50% { border-right-color: black}
 }
 
-.pic-of-me {
-  width: 20vw;
-  height: 20vw;
+@keyframes titleChange {
+  from {
+    color: #000000;
+  }
+  to {
+    color: #795548;
+  }
+}
+
+/** The page header
+*/
+
+.page-header {
+  border-bottom: 1.5px solid #795548;
+}
+
+.page-header-main {
+  /* border: 1px solid black; */
+  height: 80vh;
+  margin: 0 auto;
+
+  flex-direction: column;
+  justify-content: center;
+}
+
+.page-header-text {
+  display: block;
+  margin: 0;
+  /* border: 1px solid black; */
+}
+
+h3.page-header-text {
+  font-size: 2em;
+}
+
+p.page-header-text {
+  font-size: 1.5em;
+}
+
+p.page-header-text a {
+  text-decoration: none;
+  color: #795548;
+}
+
+p.page-header-text a:hover {
+  text-decoration: underline;
+  color: #4b2c20;
+}
+
+.page-header-main .chevron-down-link {
+  text-decoration: none;
+}
+
+.page-header-main .chevron-down {
+  position: relative;
+  top: 5vh;
+  color: #795548;
+  text-decoration: none;
+  animation: bopping 2s linear 0s infinite alternate both;
+}
+.page-header-main .chevron-down:hover {
+  animation: none;
+  transform: translate(0, 5px);
+}
+
+@keyframes bopping {
+  30%, 70% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, 5px);
+  }
+}
+
+/** Projects Section
+*/
+
+.project-container {
+  border-top: 1.5px solid #795548;
+  border-bottom: 1.5px solid #795548;
+}
+
+.projects {
+  margin: 0 auto;
+  padding: 5vh 0 0 0;
+  justify-content: space-between;
+}
+
+.projects-header {
+  font-family: 'Roboto Slab', serif;
+}
+
+.project {
+  border: 1px solid #bcbcbc;
+  border-radius: 5px;
+  margin: 0 0 5vh 0;
+  overflow: hidden;
+
+  height: 36vh;
+  width: 33vw;
+}
+
+.project:hover {
+  box-shadow: 10px 10px 10px black;
+}
+
+.project-nav {
+  width: 100%;
+  background: #DEE1E6;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px #bcbcbc;
+  height: 21.5px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-nav-buttons {
+  position: absolute;
+  align-self: flex-start;
+  /* left: 1vw; */
+  width: 4vw;
+  display: flex;
+  justify-content: space-around;
+}
+
+.project-nav-button {
+  display: flex;
+  width: 1vw;
+  height: 1vw;
+  border-radius: 50%;
+}
+
+.red-button {
+  background-color: #F16860;
+}
+
+.green-button {
+  background-color: #64C35B;
+}
+
+.yellow-button {
+  background-color: #F9BE52;
+}
+
+.project-nav-name {
+  color: rgba(59, 58, 58, 0.5);
+  font-size: 15px;
+  align-self: center;
+}
+
+.project-main {
+  width: 100%;
+  height: 100%;
+}
+
+.project-img {
+  width: 100%;
+}
+
+/** About Section
+*/
+
+.about-container {
+  background: #eeeeee;
+  border-top: 1.5px solid #795548;
+  border-bottom: 1.5px solid #4b2c20;
+  justify-content: center;
+  align-items: center;
+}
+
+.about {
+  height: 100%;
+}
+
+/** Footer Section
+*/
+
+.footer-container {
+  height: 30vh;
+  border-top: 1.5px solid #4b2c20;
+  background: #4b2c20;
+  justify-content: center;
+}
+
+.footer {
+  justify-content: space-around;
+}
+
+.footer ul {
+  /* border: 1px solid black; */
+
+  margin: 5vh 0;
+  height: 60%;
+
+  display: flex;
+
+  flex-direction: column;
+  justify-content: space-between;
+
+  font-size: 3vh;
+  color: #eeeeee;
+  list-style: none;
+}
+
+.footer ul li:first-child {
+  color: #eeeeee;
+  margin: 0 0 2vh 0;
+}
+
+.footer ul li a {
+  color: #a98274;
+  text-decoration: none;
+}
+
+.footer-bottom {
+  color: white;
 }
