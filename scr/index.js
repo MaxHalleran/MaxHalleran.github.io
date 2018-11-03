@@ -8,18 +8,18 @@ function scrollToView(event) {
   });
 }
 
-function projectFocus() {
-  console.log('entered!');
-}
-
-function projectBlur() {
-  console.log('exited!');
-}
+// function projectFocus() {
+//   console.log('entered!');
+// }
+//
+// function projectBlur() {
+//   console.log('exited!');
+// }
 
 $(document).ready(() => {
   /* Adding smooth scrolling to the page
   */
   $('a[href^="#"]').click(scrollToView);
 
-  $('.project').hover(projectFocus, projectBlur);
+  // $('.project').hover(projectFocus, projectBlur);
 });

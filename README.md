@@ -8,48 +8,43 @@ Essential features for this portfolio:
 
 ### Landing Section:
 
-  Goal:
-  - The landing page needs my name, email, some convenient links and a succinct and captivating message.
-
-   Focus:
    - The message needs to be reworked to better define the fact that I'm looking for a job and not contracts.
+
+   - * The project button scrolls past the section heading.
 
 ### Project Section
 
-  Goal:
-  - the project section needs to display 4 of my most recent and high profile projects in an easy to digest way.
+   - Group skill buttons
 
-   Focus:
-   - There should be a section talking about what skills I have and what I have used for projects.
-   - * These skills buttons should filter which projects are shown.
-   - Each project should on hover display a succinct list of the skills that I used and a link to their github repo.
+   - There should be a section talking about what skills I have and what I have used for projects. This section needs to be reworded.
+
+   - Each project should on hover display a succinct list of the skills that I used and a link to their Github repo. These buttons need to be better placed and animated.
+
+   - There should be a Github button that 'heads' the buttons and should be styled somewhat differently.
+
+   - On hover, a second image from the project (which should be darker) should scroll down and replace the previous image.
+
    - * Each project should have a more detailed breakdown. This could be done with a page turn effect on the projects section.
+
+   - * Skill buttons should filter which projects are shown.
 
 ### About Section
 
-  Goal:
-  - the about section should give a quick summary about me and also have an email link.
+   - The about section needs a reworked summary.
 
-   Focus:
-   - The project section needs a summary.
+### Footer Section
 
- - footer
-
-  Goal:
-  - The footer should have a collection of links to my social media and links to transverse the page.
-
-   Focus:
    - * The section needs some further styling
 
 ### Responsiveness
 
-  Goal:
-  - The portfolio site should be responsive across all browsers (within reason) and all screen sizes.
-
-    Focus:
     - Laptop Size: (screen > 1200px)
 
-    - Medium Screen Size: (1200 > screen > 800px)
+    - Medium Screen Size: (1200px > screen > 800px)
+
+    - Smaller Screens and Tablets: (800px > screen > ?)
+
+    - Mobile and beyond. Will most likely break down needs into 200px sections.
 
 * denotes stretch focus' beyond the mvp needs.
 
