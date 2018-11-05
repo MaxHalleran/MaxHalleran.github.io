@@ -224,8 +224,13 @@ p.page-header-text a:hover {
   margin-bottom: 5vh;
 }
 
+.projects-header h3.col-10 {
+  font-size: 1.8em;
+}
+
 .projects-header p.col-10 {
   text-align: justify;
+  font-size: 1.3em;
 }
 
 .projects-header-skills {
