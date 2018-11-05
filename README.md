@@ -8,25 +8,17 @@ Essential features for this portfolio:
 
 ### Landing Section:
 
-   - The message needs to be reworked to better define the fact that I'm looking for a job and not contracts.
-
-   - * The project button scrolls past the section heading.
+   - The project button scrolls past the section heading.
 
 ### Project Section
 
-   - Group skill buttons
-
-   - There should be a section talking about what skills I have and what I have used for projects. This section needs to be reworded.
-
-   - Each project should on hover display a succinct list of the skills that I used and a link to their Github repo. These buttons need to be better placed and animated.
-
-   - There should be a Github button that 'heads' the buttons and should be styled somewhat differently.
-
-   - On hover, a second image from the project (which should be darker) should scroll down and replace the previous image.
+   - * There should be a second picture of the project that slides down into place.
 
    - * Each project should have a more detailed breakdown. This could be done with a page turn effect on the projects section.
 
    - * Skill buttons should filter which projects are shown.
+
+   - * Group skill buttons
 
 ### About Section
 
@@ -39,12 +31,24 @@ Essential features for this portfolio:
 ### Responsiveness
 
     - Laptop Size: (screen > 1200px)
+      CHECK
 
-    - Medium Screen Size: (1200px > screen > 800px)
+    - Medium Screen Size: (1200px > screen > 1000px)
+      CHECK
 
-    - Smaller Screens and Tablets: (800px > screen > ?)
+    - Smaller Screens and Tablets: (1000px > screen > 800px)
+      CHECK
 
-    - Mobile and beyond. Will most likely break down needs into 200px sections.
+    - Smallest Screens: (800px > screen > 600px)
+      CHECK
+
+    - Tablets and large phones: (600px > screen > 440px)
+      CHECK
+
+    - Mobile: (440px > screen > 200px)
+      CHECK
+
+    - Swatches and tiny things: (200px > screen)
 
 * denotes stretch focus' beyond the mvp needs.
 
@@ -60,10 +64,17 @@ CSS index
   P - Light: #ffffff
   P - Dark: #bcbcbc
   P - Text: #000000
+
   Secondary: #795548
   S - Light: #a98274
   S - Dark: #4b2c20
   S - Text: #ffffff
+
+  Second Secondary: #18227c
+  S - Light: #514aac
+  S - Dark: #00004f
+  S - Text: #ffffff
+
   'white': #F5F5F7
   nav silver: #DEE1E6
   nav red: #F16860
@@ -91,6 +102,9 @@ Project layout:
   </div>
   <div class="project-main">
     this should have a picture
+  </div>
+  <div class="project-buttons">
+    <button type="button" name="button">Github</button>
   </div>
 </div>
 ```

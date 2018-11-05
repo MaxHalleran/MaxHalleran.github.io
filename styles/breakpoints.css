@@ -1,0 +1,262 @@
+@media screen and (min-width: 1200px) {
+  /* Header Section */
+  .navbar-title {
+    width: 40vw;
+  }
+  .navbar-links {
+    width: 40vw;
+  }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1199px) {
+  /* Header Section */
+  .navbar-title {
+    width: 35vw;
+  }
+  .navbar-links {
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    width: 60vw;
+  }
+  /* Project Section */
+  .projects-header-skills p {
+    width: 20%;
+  }
+  .project {
+    width: 38vw;
+    height: 20.727vw;
+  }
+  /* About */
+  .about h3 {
+    font-size: 1.5em;
+  }
+
+  .about p {
+    font-size: 1.3em;
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width: 999px) {
+  /* Header */
+  .navbar-links {
+    font-size: 0.9em;
+  }
+  .page-header-main .chevron-down {
+    top: 2vh;
+  }
+  /* Projects */
+  .projects-header-skills p {
+    width: 25%;
+  }
+  .project {
+    width: 38vw;
+    height: 20.727vw;
+  }
+  .project-buttons {
+    width: 90%;
+  }
+  .project:hover .project-buttons {
+    transform: translate(0, -25vh);
+  }
+  /* About */
+  /* Footer */
+  .footer-container {
+    margin-top: 5vh;
+  }
+  .footer {
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (max-width: 799px) {
+  /* Header */
+  #page-header {
+    width: 100vw;
+  }
+  .navbar {
+    width: 100%;
+    font-size: 1em;
+    justify-content: space-between;
+  }
+  .navbar p.col-6 {
+    font-size: 0.8em;
+  }
+  .navbar-links {
+    width: 55%;
+    justify-content: space-between;
+  }
+  .navbar-link-email {
+    font-size: 0.8em;
+  }
+  .page-header-main {
+    justify-content: space-around;
+  }
+  h3.page-header-text {
+    font-size: 1.5em;
+  }
+  p.page-header-text {
+    font-size: 1.2em;
+  }
+  /* Projects */
+  #projects {
+    width: 100%;
+  }
+  .projects-header-skills p {
+    font-size: 0.9em;
+    width: 25%;
+  }
+  .project {
+    height: 42.7vw;
+    width: 80vw;
+  }
+  .project:hover .project-buttons {
+    transform: translate(0, -30vh);
+  }
+  /* About */
+  .about-container {
+    letter-spacing: .1em;
+    line-height: 2;
+  }
+  .about h3 {
+    font-size: 1.5em;
+  }
+  .about p {
+    font-size: 1.2em;
+  }
+  /* Footer */
+  .footer-container {
+    width: 100%;
+    min-height: 0;
+    height: 200px;
+  }
+  .footer {
+    width: 100%;
+  }
+  .footer ul {
+    font-size: 1em;
+  }
+  .footer ul li:first-child {
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .page {
+    letter-spacing: .08em;
+    line-height: 1.5;
+  }
+  .navbar {
+    font-size: 1em;
+  }
+  .navbar-links {
+    justify-content: flex-end;
+  }
+  .navbar-link-about, .navbar-link-projects {
+    display: none;
+    width: 0;
+  }
+  .navbar-link-email {
+    margin-right: 10px;
+  }
+  .navbar p.col-6 {
+    display: none;
+  }
+  .projects {
+    width: 100%;
+  }
+  .projects-header {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .projects-header-skills {
+    justify-content: flex-start;
+  }
+  .projects-header-skills p {
+    width: auto;
+  }
+  .project {
+    width: 100%;
+    height: 54.54vw;
+    margin-top: 5vh;
+  }
+  .project:hover .project-buttons {
+    transform: translate(0, -30vh);
+  }
+  .footer {
+    justify-content: space-between;
+    margin-left: 5px;
+  }
+  .footer ul {
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 200px) and (max-width: 439px) {
+  .page {
+    letter-spacing: .07em;
+    line-height: 1;
+  }
+  .name-extension {
+    display: none;
+  }
+  .navbar {
+    justify-content: center;
+  }
+  .navbar-title {
+    width: auto;
+  }
+  .navbar-links {
+    width: 100%;
+    justify-content: center;
+    height: auto;
+  }
+  h3.page-header-text {
+    font-size: 1em;
+  }
+  p.page-header-text {
+    font-size: 0.9em;
+  }
+  .projects-header h3 {
+    font-size: 1em;
+  }
+  .projects-header p {
+    font-size: 0.9em;
+  }
+  .project-buttons button {
+    font-size: 0.8em;
+  }
+  .about-container {
+    height: auto;
+  }
+  .about {
+    font-size: 0.8em;
+    letter-spacing: 0.07em;
+    line-height: 1;
+  }
+  .footer ul:first-child {
+    display: none;
+  }
+  .footer-container {
+    height: auto;
+    margin-top: 5vh;
+  }
+  .footer {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer ul {
+    width: 100%;
+    justify-content: center;
+    height: auto;
+  }
+  .footer-link-email {
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (max-width: 199px) {
+
+}
