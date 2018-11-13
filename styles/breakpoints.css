@@ -214,7 +214,7 @@
   }
 }
 
-@media screen and (min-width: 200px) and (max-width: 439px) {
+@media screen and (max-width: 439px) {
   .page {
     letter-spacing: .07em;
     line-height: 1;
@@ -234,10 +234,10 @@
     height: auto;
   }
   h3.page-header-text {
-    font-size: 1em;
+    font-size: 1.1em;
   }
   p.page-header-text {
-    font-size: 0.9em;
+    font-size: 1em;
   }
   .projects-header h3 {
     font-size: 1em;
