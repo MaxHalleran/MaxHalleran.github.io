@@ -6,6 +6,12 @@
   .navbar-links {
     width: 40vw;
   }
+  .page-header {
+    min-height: 650px;
+  }
+  .page-header-main .chevron-down {
+    top: 50px;
+  }
 }
 
 @media screen and (min-width: 1000px) and (max-width: 1199px) {
@@ -17,6 +23,15 @@
     justify-content: space-around;
     flex-wrap: nowrap;
     width: 60vw;
+  }
+  .page-header {
+    min-height: 680px;
+  }
+  .page-header-main {
+
+  }
+  .page-header-main .chevron-down {
+    top: 50px;
   }
   /* Project Section */
   .projects-header-skills p {
@@ -99,6 +114,9 @@
   p.page-header-text {
     font-size: 1.2em;
   }
+  .page-header-main .chevron-down {
+    top: 10px;
+  }
   /* Projects */
   #projects {
     width: 100%;
@@ -162,6 +180,9 @@
   }
   .navbar p.col-6 {
     display: none;
+  }
+  .page-header-main {
+    min-height:490px;
   }
   .projects {
     width: 100%;
