@@ -82,6 +82,10 @@
   animation: titleChange 1s ease 0s 1 alternate both;
 }
 
+.navbar-title p {
+  font-size: 1em;
+}
+
 .navbar-links {
   height: 100%;
   justify-content: space-around;
