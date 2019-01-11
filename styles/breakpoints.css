@@ -257,6 +257,9 @@
   .project-buttons button {
     font-size: 0.8em;
   }
+  .project:hover .project-buttons {
+    transform: translate(0, -20vh);
+  }
   .about-container {
     height: auto;
   }
@@ -285,6 +288,10 @@
   .footer-link-email {
     font-size: 0.8em;
   }
+}
+
+@media screen and (max-width: 199px) {
+
 }
 
 @media screen and (max-width: 199px) {
