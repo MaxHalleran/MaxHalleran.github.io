@@ -290,8 +290,13 @@
   }
 }
 
-@media screen and (max-width: 199px) {
-
+@media screen and (max-width: 265px) {
+  .project-buttons button {
+    font-size: 0.55em;
+  }
+  .project:hover .project-buttons {
+    transform: translate(0, -16vh);
+  }
 }
 
 @media screen and (max-width: 199px) {
