@@ -1,0 +1,467 @@
+/** CSS index
+  Roboto Fonts:
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto Mono', monospace;
+  font-family: 'Roboto Slab', serif;
+  Colors:
+  Primary: #eeeeee
+  P - Light: #ffffff
+  P - Dark: #bcbcbc
+  P - Text: #000000
+  Secondary: #795548
+  S - Light: #a98274
+  S - Dark: #4b2c20
+  S - Text: #ffffff
+  'white': #F5F5F7
+  nav silver: #DEE1E6
+  nav red: #F16860
+  nav orange: #F9BE52
+  nav green: #64C35B
+*/
+
+/** Page wide effects
+*/
+
+ * {
+   box-sizing: border-box;
+   margin: 0;
+ }
+
+ body {
+  scroll-behavior: smooth;
+ }
+
+.page {
+  background-color: #eeeeee;
+  color: #000000;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: .13em;
+  line-height: 2;
+  scroll-behavior: smooth;
+}
+
+.page-header {
+  min-height: 573px;
+}
+
+/** The navbar section
+*/
+
+.navbar {
+  height: 15vh;
+  min-height: 83px;
+  border-top: 3px solid #795548;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #ffffff;
+  font-size: 1.2em;
+}
+
+.navbar-title {
+  width: 35vw;
+}
+
+.navbar-title .name {
+  border: 1px solid black;
+
+  overflow: hidden;
+  font-family: 'Roboto Mono', monospace;
+  display: inline-block;
+  white-space: nowrap;
+  animation:
+    typing 1.5s steps(40, end) 1,
+    blinking .75s step-end 0s 5 normal forwards;
+}
+
+.navbar-title .name a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.navbar-title .name a:hover {
+  animation: titleChange 1s ease 0s 1 alternate both;
+}
+
+.navbar-title p {
+  font-size: 1em;
+}
+
+.navbar-links {
+  height: 100%;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  width: 60vw;
+}
+
+.navbar-links a {
+  text-decoration: none;
+}
+
+.navbar-link {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.navbar-link:hover {
+  border-bottom: 3px solid #4b2c20;
+}
+
+.navbar-link-about {
+  color: #4b2c20;
+}
+
+.navbar-link-projects {
+  color: #000000;
+}
+
+a.navbar-link-email {
+  color: #bcbcbc;
+}
+
+a.navbar-link-email:hover {
+  color: #4b2c20;
+
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+    border-right: 1px solid black;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes blinking {
+  from, to { border-color: transparent }
+  50% { border-right-color: black}
+}
+
+@keyframes titleChange {
+  from {
+    color: #000000;
+  }
+  to {
+    color: #795548;
+  }
+}
+
+/** The page header
+*/
+
+.page-header {
+  border-bottom: 1.5px solid #795548;
+}
+
+.page-header-main {
+  min-height: 85vh;
+  margin: 0 auto;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.page-header-text {
+  display: block;
+  margin: 0;
+}
+
+h3.page-header-text {
+  font-size: 2em;
+}
+
+p.page-header-text {
+  font-size: 1.5em;
+}
+
+p.page-header-text a {
+  text-decoration: none;
+  color: #795548;
+}
+
+p.page-header-text a:hover {
+  text-decoration: underline;
+  color: #4b2c20;
+}
+
+.page-header-main .chevron-down-link {
+  text-decoration: none;
+}
+
+.page-header-main .chevron-down {
+  position: relative;
+  top: 25px;
+  color: #795548;
+  text-decoration: none;
+  animation: bopping 2s linear 0s infinite alternate both;
+}
+.page-header-main .chevron-down:hover {
+  animation: none;
+  transform: translate(0, 5px);
+}
+
+@keyframes bopping {
+  30%, 70% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, 5px);
+  }
+}
+
+/** Projects Section
+*/
+
+.project-container {
+  border-top: 1.5px solid #795548;
+}
+
+.projects {
+  margin: 0 auto;
+  padding: 5vh 0 0 0;
+  justify-content: space-between;
+}
+
+.projects-header {
+  margin-bottom: 5vh;
+}
+
+.projects-header h3.col-10 {
+  font-size: 1.8em;
+}
+
+.projects-header p.col-10 {
+  text-align: justify;
+  font-size: 1.3em;
+}
+
+.projects-header-skills {
+  margin: 3vh auto 0 auto;
+  justify-content: center;
+}
+
+.projects-header-skills p {
+
+  white-space: nowrap;
+
+  width: 14.28%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project {
+  border: 1px solid #bcbcbc;
+  border-radius: 5px;
+  margin: 0 0 5vh 0;
+  overflow: hidden;
+  justify-content: center;
+
+  box-shadow: 5px 5px 1px #bcbcbc;
+
+  height: 18vw;
+  width: 33vw;
+}
+
+.project-nav {
+  width: 100%;
+  background: #DEE1E6;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px #bcbcbc;
+  height: 21.5px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 2;
+}
+
+.project-nav-buttons {
+  position: absolute;
+  align-self: flex-start;
+  width: 4vw;
+  display: flex;
+  justify-content: space-around;
+}
+
+.project-nav-button {
+  display: flex;
+  width: 1vw;
+  height: 1vw;
+  border-radius: 50%;
+}
+
+.red-button {
+  background-color: #F16860;
+}
+
+.green-button {
+  background-color: #64C35B;
+}
+
+.yellow-button {
+  background-color: #F9BE52;
+}
+
+.project-nav-name {
+  color: rgba(59, 58, 58, 0.5);
+  font-size: 15px;
+  align-self: center;
+}
+
+.project-main {
+  width: 100%;
+  height: 100%;
+}
+
+.project-img {
+  width: 100%;
+  transition: filter .5s;
+}
+
+/** the project hover section
+*/
+
+.project:hover .project-img {
+  filter: brightness(50%);
+}
+
+.project-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  transition: transform .5s ease-in-out;
+}
+
+.project-buttons button {
+  margin: 5px;
+}
+
+.project-buttons div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.project-buttons a {
+  color: black;
+  text-decoration: none;
+  font-size: 1.3em;
+  width: 100%;
+}
+
+.project:hover .project-buttons {
+  transform: translate(0, -25vh);
+}
+
+/** About Section
+*/
+
+.about-container {
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: .13em;
+  line-height: 2;
+
+  background: #eeeeee;
+  justify-content: center;
+  align-items: center;
+}
+
+.about {
+  flex-direction: column;
+  justify-content: space-around;
+
+}
+
+.about h3 {
+  font-size: 2em;
+  color: #ffffff;
+}
+
+.about p {
+  display: block;
+  margin: 0;
+  font-size: 1.5em;
+  text-align: justify;
+}
+
+.about a {
+  text-decoration: none;
+  color: #795548;
+}
+
+.about a:hover {
+  text-decoration: underline;
+  color: #4b2c20;
+}
+
+/** Footer Section
+*/
+
+.footer-container {
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: .13em;
+
+  height: 35vh;
+  min-height: 275px;
+  border-top: 3px solid #4b2c20;
+  margin-top: 3vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  justify-content: space-around;
+}
+
+.footer ul {
+  margin: 5vh 0;
+  height: 60%;
+
+  display: flex;
+
+  flex-direction: column;
+  justify-content: space-between;
+
+  font-size: 1.5em;
+  color: #eeeeee;
+  list-style: none;
+}
+
+.footer ul i {
+  color: #4b2c20;
+}
+
+.footer ul li:first-child {
+  color: #4b2c20;
+  font-size: 1.2em;
+  margin: 0 0 2vh 0;
+}
+
+.footer ul li a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.footer ul li a:hover {
+  border-bottom: 1px solid #4b2c20;
+}
+
+.footer-bottom {
+  margin: 0 auto;
+
+  font-family: 'Roboto Mono', monospace;
+  font-weight: bold;
+
+  color: #4b2c20;
+  justify-content: center;
+  align-items: center;
+  height: 13vh;
+}

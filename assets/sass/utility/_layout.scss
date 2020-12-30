@@ -1,92 +1,92 @@
-.kd-display--block {
-	display: block;
-}
-.kd-max-width--container {
-    max-width: $max-width--container;
-}
-.kd-max-width--full {
-    max-width: $max-width--full;
-}
-.kd-max-width--1000 {
-    max-width: $max-width--1000;
-}
+// .kd-display--block {
+// 	display: block;
+// }
+// .kd-max-width--container {
+//     max-width: $max-width--container;
+// }
+// .kd-max-width--full {
+//     max-width: $max-width--full;
+// }
+// .kd-max-width--1000 {
+//     max-width: $max-width--1000;
+// }
 
-.kd-max-width--inner {
-    max-width: $max-width--inner-content;
-    margin: auto;
-}
+// .kd-max-width--inner {
+//     max-width: $max-width--inner-content;
+//     margin: auto;
+// }
 
-.kd-no-space {
-    margin: 0;
-    padding: 0;
+// .kd-no-space {
+//     margin: 0;
+//     padding: 0;
 
-    &--top {
-        margin-top: 0;
-        padding-top: 0;
-    }
+//     &--top {
+//         margin-top: 0;
+//         padding-top: 0;
+//     }
 
-    &--bottom {
-        margin-bottom: 0;
-        padding-bottom: 0;
-    }
-}
+//     &--bottom {
+//         margin-bottom: 0;
+//         padding-bottom: 0;
+//     }
+// }
 
-.kd-margin {
-    &-bottom {
-        &--0 {
-            margin-bottom: 0 !important; // Form styling is multi tiered
-        }
+// .kd-margin {
+//     &-bottom {
+//         &--0 {
+//             margin-bottom: 0 !important; // Form styling is multi tiered
+//         }
 
-        &--20 {
-            margin-bottom: 20px;
-        }
+//         &--20 {
+//             margin-bottom: 20px;
+//         }
 
-        &--40 {
-            margin-bottom: 40px;
-        }
+//         &--40 {
+//             margin-bottom: 40px;
+//         }
 
-        &--60 {
-            margin-bottom: 60px;
-        }
-    }
+//         &--60 {
+//             margin-bottom: 60px;
+//         }
+//     }
 
-    &-top {
-        &--20 {
-            margin-top: 20px;
-        }
+//     &-top {
+//         &--20 {
+//             margin-top: 20px;
+//         }
 
-        &--40 {
-            margin-top: 40px;
-        }
-        &--60 {
-            margin-top: 60px;
-        }
-    }
-}
+//         &--40 {
+//             margin-top: 40px;
+//         }
+//         &--60 {
+//             margin-top: 60px;
+//         }
+//     }
+// }
 
-.kd-padding {
-    &__top {
-        &--60 {
-            padding-top: 60px;
-        }
+// .kd-padding {
+//     &__top {
+//         &--60 {
+//             padding-top: 60px;
+//         }
 
-        &--50 {
-            padding-top: 50px;
-        }
-    }
+//         &--50 {
+//             padding-top: 50px;
+//         }
+//     }
 
-    &__bottom {
-        &--50 {
-            padding-bottom: 50px;
-        }
-    }
-}
+//     &__bottom {
+//         &--50 {
+//             padding-bottom: 50px;
+//         }
+//     }
+// }
 
-// ie workaround as it doesn't support position sticky which is set on header for post type pages
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-    .kd-post {
-        main > section:first-child, main > article:first-child {
-           margin-top: 95px; 
-        }
-    }
-}
+// // ie workaround as it doesn't support position sticky which is set on header for post type pages
+// @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+//     .kd-post {
+//         main > section:first-child, main > article:first-child {
+//            margin-top: 95px; 
+//         }
+//     }
+// }
