@@ -2,7 +2,7 @@
 
 // 1. Configuration and helpers
 // Imported first as helpers need to be defined highest in the stylesheet
-// @import 'abstracts/abstracts-dir';
+@import 'abstracts/abstracts-dir';
 
 // 2. Vendors
 // Second so vendor styles can be overwritten if needed
@@ -23,7 +23,3 @@
 
 // 7. Themes
 // @import 'utility/utility-dir';
-
-* {
-	border: 1px solid red;
-}
