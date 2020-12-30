@@ -1,0 +1,272 @@
+.kd-section {
+    &.kd-section--front-hero {
+        z-index: 0;
+        padding: 0;
+        text-align: left;
+    }
+    .kd-rockets-banner {
+        position: relative;
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: 1fr;
+        -ms-grid-rows: 1fr 1fr 1fr 1fr 1.5fr;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4,1fr) 1.5fr;
+        height: 800px;
+        max-width: 100%;
+        padding: 0;
+        overflow: hidden;
+        background-size: cover;
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        z-index: 1;
+        @include media("<1600") {
+            background-position: top;
+        }
+        @include media(">=max-width") {
+            -ms-grid-rows: 1fr 1fr 1fr 1fr 2fr;
+            grid-template-rows: repeat(4, 1fr) 2fr;
+        }
+    
+        &__rockets {
+            position: relative;
+            max-width: 100%;
+            -ms-grid-column: 1;
+            -ms-grid-row: 1;
+            -ms-grid-row-span: 5;
+            grid-column: 1;
+            grid-row: 1/6;
+        }
+        &__rocket1 {
+            position: absolute;
+            top: auto;
+            bottom: auto;
+            right: auto;
+            left: 0;
+            transform: translateY(250px);
+            width: 100%;
+            height: 100%;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            @include media("<=desktop") {
+                left: -65px;
+                transform: translateY(550px);
+                width: 75%;
+                height: 75%;
+            }
+            @include media("<=phone") {
+                // left: -25px;
+                transform: translateY(465px);
+            }
+        }
+        &__rocket2 {
+            position: absolute;
+            top: auto;
+            bottom: auto;
+            right: 65px;
+            transform: translate(0px, 500px);
+            width: 50%;
+            height: 50%;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            @include media("<=desktop") {
+                right: 100px;
+                transform: translateY(600px);
+            }
+            @include media("<=phone") {
+                right: 50px;
+                transform: translateY(550px);
+            }
+        }
+        &__bottom-clouds {
+            -ms-grid-column: 1;
+            -ms-grid-row: 5;
+            grid-column: 1;
+            grid-row: 5;
+            position: relative;
+            z-index: 1;
+            background-size: cover;
+            background-position: top;
+            margin-bottom: -1px;
+            pointer-events: none;
+        }
+        &__text-block {
+            display: flex;
+            align-items: center;
+            -ms-grid-column: 1;
+            -ms-grid-row: 1;
+            -ms-grid-row-span: 2;
+            grid-column: 1;
+            grid-row: 2 / 5;
+            position: relative;
+            z-index: 0;
+            width: 100%;
+            max-width: $max-width--container;
+            margin: 0 auto;
+            padding: 0 15px;
+            @include media("<tablet") {
+                -ms-grid-row: 3;
+                grid-row: 3;
+                width: 100%;
+                padding: 0 15px;
+                text-align: center;
+            }
+            @include media(">=max-width") {
+                grid-row: 3 / 5;
+                -ms-grid-row: 1;
+            }
+        }
+        &__text-block-content {
+            max-width: 475px;
+            @include media(">=desktop") {
+            position: fixed;
+            }
+        }
+        &__title {
+            margin-bottom: 20px;
+            em {
+                font-size: 60px;
+                font-weight: 900;
+            }
+            span{
+                position: relative;
+                display: inline-block;
+                &:before{
+                    content: "";
+                    position: absolute;
+                    bottom: 6px;
+                    right: -10px;
+                    left: -10px;
+                    height: 24px;
+                    z-index: -1;
+                    background-color: rgba(9,173,238,.30);
+                }
+            }
+            @include media("<tablet") {
+                font-size: 45px;
+                margin-bottom: 30px;
+            }
+            @include media("<phone") {
+                font-size: 30px;
+                em {
+                    font-size: 45px;
+                }
+            }
+        }
+        &__sub-title {
+            display: block;
+            color: $color--white;
+            font-size: 22px;
+            font-weight: 300;
+            margin: 0 0 30px;
+            @include media("<desktop") {
+                letter-spacing: normal;
+            }
+            @include media("<tablet") {
+                font-size: 20px;
+                margin: 0 0 30px;
+            }
+            @include media("<phone") {
+                font-size: 18px;
+            }
+            
+        }
+    }
+}
+
+section.kd-section .kd-rockets-banner {
+    background-image: url( "../images/frontpage-banner3.png" );
+
+    &__rocket1 {
+        background-image: url( "../images/rocketman-lg.png" );
+    }
+    &__rocket2 {
+        background-image: url( "../images/rocketman-sm.png" );
+    }
+    &__bottom-clouds {
+        background-image: url( "../images/frontpage-banner-bottom-clouds12.png" );
+    }
+}
+
+.kd-section {
+    &.kd-section--front-results {
+        background-size: cover;
+        background-position: bottom;
+        background-repeat: no-repeat;
+        min-height: 1350px;
+        padding: 80px 0;
+        @include media("<desktop") {
+            min-height: 2150px;
+            @media screen and (orientation: landscape) { 
+                min-height: 1150px;
+            }
+        }
+        @include media("<tablet") {
+            min-height: 2400px;
+        }
+        .kd-results-cards {
+            margin: 0 auto 20px;
+        }
+        & {
+            background-image: url( "../images/divider-6.jpg" );
+        }
+    }
+}
+.kd-section--front-results {
+    h2 {
+        max-width: 800px;
+    }
+}
+
+.kd-section--featured-in {
+    .kd-accolades {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}
+
+.kd-section {
+    &.kd-section--business-rating {
+        background-image: linear-gradient(
+            to top, 
+            $color--white,
+            $color--white 20%,
+            $color--transparent 20%,
+            $color--transparent 100%
+          );
+        padding-top: 0;
+        padding-bottom: 80px;
+    }
+}
+.kd-section {
+    &.kd-section--front-alchemists {
+        background-color: $color--white;
+    }
+}
+.kd-section--front-alchemists {
+    padding: 40px 0;
+    &__text {
+        max-width: $max-width--inner-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+.kd-section--front-blog {
+    background-color: $color--white;
+    padding: 40px 0 60px;
+}
+.kd-section--front-sky-banner {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    & {
+        background-image: url( "../images/divider-4.jpg" );
+    }
+}
+.kd-section--will-wont {
+    background-color: $color--white;
+    padding: 80px 0;
+}

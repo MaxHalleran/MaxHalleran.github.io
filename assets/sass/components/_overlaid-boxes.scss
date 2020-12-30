@@ -1,0 +1,316 @@
+/*
+	I'm currently splitting this file into structure and skin. The structure of this component is solid while the skin changes between the testimonial and the call to action version. The structure is also defined by a modifier class defining where the content and where the splash are. 
+*/
+
+// Contains both boxes and sets up common placement styles.
+.kd-overlaid-boxes {
+	display: grid;
+	grid-template-rows: 40px 1fr 40px;
+	@include media("<tablet") {
+		grid-template-columns: 1fr;
+		grid-template-rows: auto auto;
+	}
+
+	// The splash, the taller of the two boxes
+	&__splash {
+		position: relative;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		border-radius: $border-radius--primary;
+		padding: 40px 40px;
+		z-index: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		@include media("<tablet") {
+			grid-column: 1;
+			grid-row: 1;
+			border-radius: $border-radius--primary $border-radius--primary 0 0;
+			z-index: 0;
+			@include box-shadow(5px, -5px, 5px, 5px);
+		}
+	}
+
+	// The logo inside of the splash, if a logo is present
+	&__brand {
+		@include media(">=tablet") {
+			max-width: 250px;
+		}
+		@include media("<tablet") {
+			height: auto;
+			max-height: 200px;
+		}
+	}
+
+	// The shorter, wider content filled box
+	&__content {
+		padding: 40px;
+		background-color: $color--white;
+		text-align: left;
+		@include box-shadow(5px, 5px, 5px, 5px);
+
+		@include media("<tablet") {
+			grid-column: 1;
+			grid-row: 2;
+			padding: 20px;
+			border-radius: 0 0 $border-radius--primary $border-radius--primary;
+			z-indeX: 1;
+		}
+	}
+
+	// For the review boxes, the styling for the quote text
+	&__quote {
+		@include media(">tablet") {
+			font-size: 30px;
+		}
+		@include media(">phone", "<tablet") {
+			font-size: 22px;
+		}
+	}
+
+	// For the review boxes, the styling for the author
+	&__author {
+		margin-bottom: 0;
+
+		@include media(">tablet") {
+			font-size: 35px;
+		}
+		@include media(">phone", "<tablet") {
+			font-size: 30px;
+		}
+	}
+
+	// Styling for the company
+	&__company {
+		font-weight: 400;
+		@include media(">tablet") {
+			font-size: 30px;
+		}
+		@include media(">phone", "<tablet") {
+			font-size: 25px;
+		}
+	}
+
+	&__author,
+	&__company {
+		margin-left: 0;
+	}
+
+	&__title {
+		font-weight: 800;
+		text-transform: none;
+		color: $color--blue-slate;
+	}
+
+	&__text {
+		color: $color--gray;
+		
+	}
+}
+
+.kd-overlaid-boxes--content-right {
+	@include media(">=tablet") {
+		grid-template-columns: 3fr 5fr;
+
+		.kd-overlaid-boxes__splash {
+			grid-column: 1;
+			grid-row: 1 / 4;
+		}
+
+		.kd-overlaid-boxes__content {
+			grid-column: 2;
+			grid-row: 2;
+			border-radius: 0 $border-radius--primary $border-radius--primary 0;
+		}
+	}
+}
+
+.kd-overlaid-boxes--content-left {
+	@include media(">=tablet") {
+		grid-template-columns: 5fr 3fr;
+
+		.kd-overlaid-boxes__splash {
+			grid-column: 2;
+			grid-row: 1 / 4;
+		}
+
+		.kd-overlaid-boxes__content {
+			grid-column: 1;
+			grid-row: 2;
+			border-radius: $border-radius--primary 0 0 $border-radius--primary;
+		}
+	}
+}
+
+// Review / testimonial overlaid boxes
+.kd-overlaid-boxes--review {
+	.kd-overlaid-boxes {
+		&__splash {
+			&::before {
+				content: '';
+				position: absolute;
+				display: block;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				width: inherit;
+				height: inherit;
+				border-radius: inherit;
+				@include blue-darkslate-overlay;
+				z-index: -1;
+			}
+		}
+
+		&__content {
+			padding: 155px 40px 40px;
+			@include background-image( "../images/quotation-mark-orange-background" );
+			background-position: 40px 60px;
+			background-size: auto;
+			background-repeat: no-repeat;
+
+			@include media("<tablet") {
+				padding: 95px 20px 20px 20px;
+				background-position: 20px 20px;
+			}
+		}
+	}
+}
+
+// Overlaid boxes with cta in splash
+.kd-overlaid-boxes--cta {
+	.kd-overlaid-boxes {
+		&__content {
+			padding: 60px;
+			// TODO - remove bg image
+			background-image: none;
+		}
+
+		&__title {
+
+		}
+
+		&__splash {
+			background-image: 
+				linear-gradient(
+					45deg,
+					#1854e0,
+					#1dc9f2
+				);
+			z-index: 1;
+			&::before {
+				display: none;
+			}
+		}
+	}
+}
+
+// Bucars image added and positioned
+.kd-overlaid-boxes__splash--bucars {
+	@include background-image( "../images/bucars-testimonial-splash", ".jpg" );
+	background-position: 80% center;
+}
+
+// Chamco image added and positioned
+.kd-overlaid-boxes__splash--chamco {
+	@include background-image( "../images/chamco-testimonial-splash", ".jpg" );
+	background-position: center;
+}
+
+// Front page first testimonial section
+.kd-section--top-bottom-clouds {
+	@include background-image( "../images/divider-3", ".jpg", true );
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding-top: 230px;
+	padding-bottom: 230px;
+
+	@include media(">widescreen") {
+		// This allows the background-image to be full size on larger screens
+		padding-top: 250px;
+		padding-bottom: 250px;
+	}
+
+	@include media("<tablet") {
+		padding-top: 150px;
+		padding-bottom: 150px;
+	}
+}
+
+.kd-section--displaced {
+	margin-bottom: -355px;
+	z-index: 6;
+	background-image: linear-gradient(
+            to bottom, 
+            $color--white,
+            $color--white 20%,
+            $color--transparent 20%,
+            $color--transparent 100%
+          );
+}
+
+.kd-overlaid-boxes--cta {
+
+	.gform_wrapper {
+		height: 100%;
+
+		.validation_message {
+			color: $color--white;
+		}
+	}
+
+	#interior-page-cta {
+		min-height: 495px;
+
+		& .gform_fields,
+		// & .ginput_container,
+		& input {
+			height: 100%;
+		}
+
+		// The footer is 70px tall, it only contains the button
+		& .gform_body {
+			height: calc(100% - 70px);
+		}
+
+		.ginput_container_select {
+			&:before {
+				top: calc(50% - 19.5px);
+			}
+		}
+	}
+
+	@include media("<phone") {
+		& {
+			grid-template-columns: 100%;
+		}
+
+		.kd-overlaid-boxes {
+			&__content,
+			&__splash {
+				padding: 40px 20px;
+			}
+		}
+
+		.gform_wrapper {
+			width: 100%;
+		}
+
+		.gform_button {
+			white-space: normal;
+			height: auto;
+			max-height: none;
+		}
+	}
+}
+
+// IE adjustments
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	.kd-overlaid-boxes--cta #interior-page-cta .gform_fields, .kd-overlaid-boxes--cta #interior-page-cta input {
+		display: block;
+	}
+}

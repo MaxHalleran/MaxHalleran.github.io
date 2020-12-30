@@ -1,0 +1,20 @@
+.kd-section.kd-section--landing-case-studies {
+    .kd-banner-container__text-block {
+        grid-row: 3;
+        @include media(">=desktop") {
+            top: 200px;
+        }
+    }
+}
+
+.kd-section--results-cards {
+    padding-top: 0;
+    @include media("<=desktop") {
+        margin-top: -100px;
+    }
+    .kd-results-cards {
+        @include media("<widescreen") {
+            padding: 0 20px;
+        }
+    }
+}

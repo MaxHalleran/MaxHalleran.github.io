@@ -1,0 +1,37 @@
+body {
+    max-width: $max-width--full;
+    min-width: 320px;
+    margin: auto;
+    @include box-shadow(0, 0, 5px, 0);
+    font: 300 20px/1.5 roboto, Arial, Helvetica, sans-serif !important;
+    color: $color--white;
+    text-align: center;
+    // overflow-x: hidden;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.kd-background--slate {
+    background-color: $color--blue-slate;
+}
+.kd-background--white {
+    background-color: $color--white;
+}
+.kd-background--light-slate {
+    background-color: $color--blue-slate-faded;
+
+}
+.kd-background--blue-gradient {
+    background-image: $color-gradient--blue-light-dark;
+}
+.kd-background--orange-gradient {
+    background-image: $color-gradient--orange;
+}
+.kd-border-top-bottom--blue {
+    border-bottom: 1px solid #05c7f2;
+    border-top: 1px solid #05c7f2;
+}
+

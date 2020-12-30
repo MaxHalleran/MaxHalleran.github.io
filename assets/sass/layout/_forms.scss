@@ -1,0 +1,237 @@
+.gform_wrapper {
+	.gform_fields {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		align-items: stretch;
+
+		.gfield {
+			width: 100%;
+			margin-bottom: 20px;
+		}
+	}
+
+	label {
+		display: none;
+	}
+
+	select,
+	input {
+		box-sizing: border-box;
+		padding: 10px;
+		color: $color--white;
+		border: 1px solid $color--white;
+		background: none;
+		font-size: 16px;
+		font-weight: 300;
+		max-height: 80px;
+
+		&::placeholder {
+			color: $color--white;
+		}
+
+		&:focus {
+			outline-color: $color--orange;
+		}
+
+		&.large {
+			width: 100%;
+		}
+	}
+
+	// Select
+
+	.ginput_container_select {
+		height: 40px;
+		position: relative;
+		@include border;
+	}
+
+	select {
+		width: 100%;
+		height: 100%;
+		border: none;
+		appearance: none;
+		position: relative;
+	}
+
+	// Google ReCaptcha badge
+
+	.ginput_container.ginput_recaptcha {
+
+		.grecaptcha-badge {
+			@include media(">phone") {
+				bottom: 65px !important;
+			}
+
+			@include media("<phone") {
+				bottom: 100px !important;
+			}
+		}
+	}
+
+	// Submit button
+
+	.gform_footer .gform_button {
+		text-transform: uppercase;
+		background: $color--orange;
+		font-size: 20px;
+		font-weight: 700;
+		padding: 20px 40px;
+		border: none;
+		width: 100%;
+		cursor: pointer;
+		appearance: none;
+		border-radius: 0;
+		box-shadow: none;
+		@include media("<phone") {
+			width: 100%;
+		}
+	}
+
+	// Validation Errors
+
+	.gform_fields .gform_validation_container {
+		visibility: hidden;
+		height: 0;
+		margin: 0;
+		padding: 0;
+		position: absolute;
+	}
+
+	.validation_message {
+		color: $color--orange;
+		border: 1px solid $color--orange;
+		font-weight: 700;
+	}
+}
+
+// gform_1 - Audit/consultation interior form
+
+#interior-page-cta {
+
+	.gform_wrapper {
+		max-height: 415px;
+
+		&.gform_validation_error {
+			max-height: 100%;
+		}
+	}
+
+	.gfield {
+		max-height: 44px;
+	}
+
+	.gfield_error {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+
+		.ginput_container {
+			order: 5;
+			width: 100%;
+		}
+
+		.validation_message {
+			order: 0;
+			width: 100%;
+		}
+	}
+
+	// Validation
+
+	.gform_wrapper.gform_validation_error {
+		max-height: 100%;
+
+		form {
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: stretch;
+			justify-content: center;
+		}
+
+		.gfield {
+			margin-top: 40px;
+		}
+	}
+
+	.gform_footer {
+		margin-top: 20px;
+	}
+}
+
+// Custom Select Styling
+
+/* style the items (options), including the selected item: */
+.select-items div,
+.select-selected {
+  padding: 10px;
+  cursor: pointer;
+  text-align: start;
+  font-family: "system-ui";
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.select-selected {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 100%;
+}
+
+.select-items {
+	padding: 10px 0;
+
+	div {
+		font-size: 14px;
+		line-height: 1;
+		padding: 5px 10px;
+	}
+}
+
+.select-selected:before {
+	content: "\e908";
+	font-weight: 900;
+	font-family: "icomoon";
+	display: block;
+	position: absolute;
+	right: 10px;
+	top: 0;
+	font-size: 26px;
+	height: 100%;
+	line-height: 44px;
+}
+
+/* Style items (options): */
+.select-items {
+  position: absolute;
+  background-color: rgba(23, 49, 59, 0.8);
+  backdrop-filter: blur(10px);
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+  background-color: rgba($color--blue-navy, 0.3);
+}
+
+.gform_wrapper {
+	.gform_hidden {
+		display: none;
+		margin: 0 !important;
+		padding: 0 !important;
+	}
+}

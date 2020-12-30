@@ -1,0 +1,56 @@
+.kd-gutenberg-content {
+    padding-top: 40px;
+    color: $color--gray;
+    text-align: left;
+    overflow: hidden;
+    word-break: break-word;
+    padding-bottom: 80px;
+    @include media("<=desktop") {
+        margin-top: 0;
+    }
+    @include media("<tablet") {
+        margin-top: 0;
+    }
+    h2, h3 {
+        margin: 30px 0 10px;
+        color: $color--blue-slate;
+        max-width: $max-width--container;
+    }
+    h4, h5, h6 {
+        color: $color--blue-slate;
+        margin: 10px 0;
+    }
+    ul {
+        list-style-type: disc;
+        padding-inline-start: 40px;
+        ul {
+            list-style: none;
+            padding-inline-start: 0;
+            li {
+                margin-bottom: 10px;
+            }
+        }
+    }
+    ol {
+        list-style-type: decimal;
+        padding-inline-start: 40px;
+    }
+    li {
+        margin-bottom: 5px;
+        &:last-child {
+            margin-bottom: 20px;
+        }
+    }
+    .gform_body ul {
+        list-style-type: none;
+        padding-inline-start: 0;
+        color: $color--blue-slate;
+    }
+    a {
+        color: $color--orange;
+    }
+    em {
+        font-style: italic;
+        color: $color--blue-slate;
+    }
+}

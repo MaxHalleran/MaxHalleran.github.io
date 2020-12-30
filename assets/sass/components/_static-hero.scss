@@ -1,0 +1,231 @@
+.kd-section--static-hero {
+	padding: 0;
+	position: relative;
+	height: 950px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	@include media("<desktop") {
+		height: 900px;
+	}
+
+	@include media("<tablet", ">phone") {
+		height: calc(52vw + 500px);
+	}
+
+	@include media("<=phone") {
+		height: 750px;
+	}
+}
+
+.kd-static-hero {
+	position: fixed;
+	width: 100%;
+	max-width: 2000px;
+	@include background-image( "../images/top-cloud-bg-case-study" );
+	background-repeat: no-repeat;
+	background-size: 100%;
+	z-index: 0;
+	height: 950px;
+	padding: 150px 0;
+
+	@include media("<=wider-screen") {
+		background-position: center;
+		background-size: cover;
+		height: 1040px;
+	}
+
+	@include media("<desktop") {
+		height: 850px;
+	}
+
+	@include media("<=phone") {
+		padding: 150px 20px;
+	}
+
+	&__title {
+		text-transform: none;
+		font-size: 60px;
+		font-weight: 900;
+		max-width: 750px;
+
+		@include media("<tablet") {
+			font-size: 45px !important;
+			margin-bottom: 30px;
+		}
+	}
+
+	&__sub-title {
+		display: block;
+		color: $color--white;
+		margin: 0 auto 40px;
+		font-size: 22px;
+		font-weight: 300;
+		max-width: 750px;
+	}
+
+	&__button {
+		min-width: 300px;
+		margin-top: 20px;
+	}
+}
+
+// This container is for the full size cloud background.
+.kd-computer {
+	position: relative;
+	z-index: 0;
+	height: 415px;
+	width: 100%;
+
+	& {
+		background-image: 
+			linear-gradient(to top, $color--white 0, transparent 5px),
+			url(../images/top-cloud-bg-bottom-case-study.png);
+	}
+
+	background-size: 100%;
+	background-position: center bottom;
+	background-repeat: no-repeat;
+
+	&__computer {
+		height: 100%;
+		width: 100%;
+		max-width: $max-width--inner-content;
+		margin: 0 auto;
+		position: relative;
+
+		@include background-image( "../images/macbook-@1200" );
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+
+	&__background,
+	&__logo {
+		background-repeat: no-repeat;
+		background-position: center;
+
+		overflow: hidden;
+		position: absolute;
+		margin: 0;
+		display: inline-block;
+	}
+
+	&__background {
+		background-size: cover;
+		z-index: 1;
+		top: 15px;
+		right: 145px;
+		bottom: 80px;
+		left: 145px;
+
+		&:before {
+			content: "";
+			display: block;
+			position: absolute;
+			background-color: $color--blue-slate;
+			opacity: 0.76;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+		}
+	}
+
+	&__logo {
+		background-size: contain;
+		z-index: 2;
+		height: 200px;
+		width: 200px;
+		top: calc(50% - 150px);
+		right: calc(50% - 100px);
+
+		&--wide {
+			height: 200px;
+			width: 300px;
+			right: calc(50% - 150px);
+		}
+
+		&--tall {
+			height: 300px;
+			width: 200px;
+		}
+	}
+
+	@include media(">1600") {
+		background-size: 100%, auto 100%;
+		background-repeat: no-repeat, repeat-x;
+	}
+
+	@include media("<desktop", ">=tablet") {
+		height: 375px;
+
+		&__computer {
+			background-size: 768px;
+			max-width: 768px;
+		}
+
+		&__background {
+			top: 15px;
+			right: 133px;
+			bottom: 75px;
+			left: 133px;
+		}
+
+		&__logo {
+			height: 150px;
+			width: 150px;
+			top: calc(50% - 120px);
+			right: calc(50% - 75px);
+
+			&--wide {
+				height: 200px;
+				width: 300px;
+				right: calc(50% - 150px);
+			}
+
+			&--tall {
+				height: 300px;
+				width: 150px;
+			}
+		}
+	}
+
+	@include media("<tablet") {
+		height: calc(48.83vw);
+		background-size: 140%;
+
+		&__computer {
+			width: 100vw;
+			background-size: 100vw;
+		}
+
+		&__background {
+			top: 1.7647vw;
+			right: 17.0588vw;
+			bottom: 9.41176vw;
+			left: 17.0588vw;
+		}
+
+		&__logo {
+			height: 23.529vw;
+			width: 23.529vw;
+
+			top: 32.353vw;
+			right: 11.7647vw;
+			top: calc(50% - 17.647vw);
+			right: calc(50% - 11.7647vw);
+
+			// &--wide {
+			// 	height: ;
+			// 	width: ;
+			// }
+
+			// &--tall {
+			// 	height: ;
+			// 	width: ;
+			// }
+		}
+	}
+}

@@ -1,0 +1,7 @@
+.kd-interior-page {
+	&__under-header {
+		@include media("<phone") {
+			margin-top: -150px;
+		}
+	}
+}

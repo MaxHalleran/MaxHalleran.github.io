@@ -1,0 +1,28 @@
+.hosting-pricing-columns .wp-block-column {
+    border: 1px solid #e5e4e3;
+    margin-top: 40px;
+    &:not(:last-child) {
+        @include media ("<=tablet") {
+            margin-bottom: 20px
+        }
+    }
+}
+.hosting-pricing-columns h3 {
+	margin: 0 auto;
+	padding: 15px;
+    background: #f4fcff;
+}
+.hosting-pricing-columns p {
+	margin-bottom: 0;
+	padding: 15px;
+	border-top: 1px solid #e5e4e3;
+    color: $color--blue-slate;
+}
+.hosting-pricing-columns p sup {
+    position: relative;
+	top: -1em;
+	font-size: 28px;
+}
+.hosting-pricing-columns p span {
+    font-size: 75px;
+}

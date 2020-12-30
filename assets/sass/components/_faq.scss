@@ -1,0 +1,77 @@
+.kd-faq {
+	border-radius: $border-radius--soft;
+	margin-bottom: 20px;
+
+	@include box-shadow($y: 10px, $blur: 11px, $spread: 0);
+	
+	&__wrapper {
+		position: relative;
+	}
+
+	&__header {
+		border-bottom: 1px solid $color--straight-grey;
+		padding: 20px 40px 20px 0;
+		margin: 0 40px; 
+		position: relative;
+	}
+
+	&__title {
+		color: $color--blue-slate;
+		font-size: 20px;
+		text-transform: none;
+		margin: 0;
+		text-align: left;
+	}
+
+	&__arrow {
+		position: absolute;
+		right: 0;
+		top: 7px;
+		display: block;
+		height: 50px;
+		width: 50px;
+		fill: #979797;
+	}
+
+	&__content {
+		transition: all 0s linear;
+		overflow: hidden;
+
+		&-text {
+			color: $color--gray;
+			padding: 20px;
+			text-align: left;
+		}
+	}
+
+	&__sub-title {
+		text-transform: none;
+		margin: 0;
+		text-align: left;
+		max-width: unset;
+		font-weight: 500;
+	}
+
+	&--inactive {
+		.kd-faq {
+			&__content {
+				height: 0;
+			}
+		}
+	}
+
+	@include media("<=phone") {
+
+		&__header {
+			margin: 0 20px;
+			padding: 20px 0 30px;
+		}
+
+		&__arrow {
+			height: 30px;
+			width: 30px;
+			top: unset;
+			bottom: 0;
+		}
+	}
+}

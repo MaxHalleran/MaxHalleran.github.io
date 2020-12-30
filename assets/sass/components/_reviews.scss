@@ -1,0 +1,238 @@
+/*
+	For mobile responsiveness:
+		Reactive size and placement until (tablet ?)
+*/
+
+.kd-reviews {
+	@include cloud-bg( $main-bg: "../images/bg-clouds-top-bottom-1920-1101", $mobile-bg: "../images/bg-clouds-top-bottom-1200x1080");
+	&__header {
+		padding-top: 100px;
+		padding-bottom: 40px;
+	}
+
+	&__slider-container {
+		padding-bottom: 100px;
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		@include media("<phone") {
+			align-items: stretch;
+		}
+
+		&::before,
+		&::after {
+			content: '';
+			display: block;
+			position: absolute;
+			z-index: 0;
+			background-color: $color--white;
+			border-radius: $border-radius--primary;
+		}
+
+		&::before {
+			width: calc(100% + 60px);
+			max-width: $max-width--inner-content + 80px;
+			height: calc(100% - 200px);
+			@include media ("<widescreen") {
+				max-width: calc(100% - 40px);
+			}
+			@include media ("<phone") {
+				max-width: calc(100% - 120px);
+				margin: 0;
+				padding: 40px 0;
+			}
+		}
+
+		&::after {
+			width: calc(100% + 20px);
+			max-width: $max-width--inner-content + 40px;
+			height: calc(100% - 160px);
+			@include media ("<widescreen") {
+				max-width: calc(100% - 80px);
+			}
+			@include media ("<phone") {
+				margin: 20px 0;
+			}
+		}
+	}
+
+	&__slider {
+		max-width: $max-width--inner-content;
+		margin: 0 auto;
+		z-index: 1;
+		position: relative;
+		background-color: $color--white;
+		border-radius: $border-radius--primary;
+		@include media ("<widescreen") {
+			max-width: calc(100% - 80px);
+		}
+		@include media ("<phone") {
+			margin: 40px 0;
+			max-width: 100%;
+		}
+		
+		&,
+		&-container::before,
+		&-container::after {
+			@include box-shadow($spread: 5px);
+		}
+	}
+
+	&__arrow {
+		height: 50px;
+		width: 50px;
+		position: absolute;
+		top: 50%;
+		z-index: 2;
+
+		&:before {
+			content: "";
+			@extend %absolutefullsize;
+			@extend %transition;
+			border-radius: 50%;
+			background-size: contain;
+			background-image: radial-gradient(
+				$color--blue-slate 30%,
+				transparent
+			);
+			opacity: 0;
+		}
+		
+		&:hover:before {
+			opacity: 0.2;
+		}
+
+		&:after {
+			@extend %absolutefullsize;
+			content: "";
+			border-radius: 50%;
+			background-size: contain;
+			@extend %transition;
+		}
+
+		&:hover:after {
+			opacity: 0.9;
+		}
+
+		&--left {
+			&:after {
+				@include background-image( "../images/blue-left-arrow" );
+			}
+			
+			left: -130px;
+			@include media ("<widescreen") {
+				left: -35px;
+			}
+			@include media ("<phone") {
+				left: -10px;
+				opacity: 0.75;
+			}
+		}
+
+		&--right {
+			&:after {
+				@include background-image( "../images/blue-right-arrow" );
+			}
+
+			right: -130px;
+			@include media ("<widescreen") {
+				right: -35px;
+			}
+			@include media ("<phone") {
+				right: -10px;
+				opacity: 0.75;
+			}
+		}
+	}
+}
+
+.kd-review {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	padding: 60px;
+
+	&__quote {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+		margin-top: 40px;
+
+		& img {
+			max-height: 100px;
+		}
+	}
+
+	&__text {
+		color: $color--blue-slate;
+		font-size: 25px;
+		margin-bottom: 40px;
+	}
+
+	&__author {
+		color: $color--orange;
+		font-size: 30px;
+		font-weight: 400;
+		text-transform: uppercase;
+		margin-top: 40px;
+
+		&-subline {
+			color: $color--gray;
+			font-size: 25px;
+		}
+	}
+
+	@include media ("<tablet") {
+		padding: 20px;
+
+		&__text {
+			font-size: 21px;
+		}
+
+		&__author {
+			font-size: 25px;
+		}
+	}
+
+	@include media ("<phone") {
+		padding: 20px;
+
+		&__text {
+			font-size: 18px;
+		}
+	}
+}
+
+// IE adjustments
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	.kd-reviews__slider-container {
+		justify-content: flex-start;
+		&:after,
+		&:before {
+			content: none;
+		}
+	}
+	.kd-reviews__slider {
+		width: 100%;
+	}
+	.kd-review__content {
+		width: 100%;
+		flex-wrap: wrap;
+	}
+	.kd-review__text {
+		width: 100%;
+	}
+	.kd-review__author {
+		width: 100%;
+	}
+}

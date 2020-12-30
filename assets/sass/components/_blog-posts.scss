@@ -1,0 +1,268 @@
+.kd-blog-posts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: $max-width--container;
+    margin: auto;
+    padding: 0;
+
+    &--padding {
+        padding: 40px 0;
+    }
+    &--padding-slider {
+        padding: 20px 0 40px;
+    }
+    
+    .kd-blog-post {
+        display: block;
+        width: 100%;
+        margin: 20px 0;
+        background-color: $color--white;
+        word-break: break-word;
+        overflow: hidden;
+        @include box-shadow(0px, 11px, 15px, 0px);
+        @include media(">tablet") {
+            display: grid;
+            position: relative;
+            grid-template-columns: 1fr;
+            grid-template-rows: minmax(100px, 175px) 1fr minmax(70px, 95px);
+            width: calc(33% - 20px);
+            // margin: 20px;
+            &--social {
+                grid-template-rows: minmax(100px, 175px) 1fr;
+                // padding-bottom: 20px;
+                &__text-container {
+                    grid-row: 2;
+                }
+                &__image-container {
+                    grid-row: 1;
+                }
+            }
+        }
+        @include media(">desktop") {
+            width: calc(33% - 40px);
+
+        }
+        &__text-container {
+            grid-row: 2 / 3;
+            width: 100%;
+            text-align: left;
+            padding: 20px 20px 0;
+            @include media(">tablet") {
+                padding: 20px 10px 0;
+            }
+        }
+        &__date {
+    
+        }
+        &__title {
+            color: $color--blue-slate;
+            font-size: 20px;
+            margin-bottom: 0;
+            .kd-blog-post__link {
+                color: inherit;
+            }
+        }
+        &__link {
+        }
+        &__image-container {
+            grid-row: 1 / 2;
+            width: 100%;
+        }
+        &__image {
+            @include media(">tablet") {
+                width: 100%;
+                height: 100%;
+                object-fit: fill;
+            }
+        }
+        &__meta {
+            grid-row: 3 / 4;
+            align-self: center;
+            width: 100%;
+            text-align: left;
+            padding: 20px;
+            @include media(">tablet") {
+                padding: 0 10px;
+            }
+        }
+        &__category {
+            color: $color--blue-aqua;
+            a {
+                color: $color--blue-aqua;
+            }
+        }
+        &__author {
+            a {
+                color: $color--gray;
+            }
+        }
+        &--first {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            @include media("<desktop") {
+                flex-direction: column;
+            }
+            &__text-container {
+                width: 35%;
+                @include media("<desktop") {
+                    width: 100%;
+                    order: 2;
+                    padding-right: 20px;
+                    padding-bottom: 20px;
+                }
+                @include media(">tablet") {
+                    padding: 20px;
+                    padding-right: 50px;
+                }
+            }
+            &__image-container {
+                width: 65%;
+                height: 100%;
+                @include media("<desktop") {
+                    width: 100%;
+                }
+            }
+            &__image {
+                max-height: 100%;
+            }
+            &__title {
+                font-size: 22px;
+                margin-bottom: 20px;
+            }
+        }
+        &--social {
+            &__text-container {
+                padding: 20px 10px;
+            }
+        }
+    }
+}
+
+.kd-section--front-blog {
+    .kd-blog-posts {
+        padding: 40px 0;
+    }
+}
+
+.kd-blog-posts--slider {
+    @include media(">=tablet") {
+        max-width: 1260px;
+    }
+    .slick-list {
+        width: inherit;
+    }
+    .slick-track {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        @include media(">=tablet") {
+            justify-content: space-evenly;
+        }
+        @include media("<=xs-phone") {
+            justify-content: flex-end;
+
+        }
+    }
+    .kd-blog-post {
+        height: auto;
+        width: 100%;
+        min-width: 320px;
+        max-width: 320px;
+        margin: 0 10px 20px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: minmax(100px, 175px) 1fr;
+        @include media(">tablet") {
+            min-width: 356px;
+            max-width: 356px;
+            margin: 0 30px 25px;
+        }
+        @include media("<tablet") {
+            @include box-shadow(0px, 7px, 8px, -2px);
+            margin: 0 8px 20px;
+        }
+        &--social {
+
+            &__text-container {
+                padding: 20px 10px;
+            }
+        }
+        &__image {
+            height: auto;
+        }
+        &__meta {
+            padding: 20px;
+        }
+    }
+    .slick-arrow {
+        position: absolute;
+        top: 210px;
+        bottom: auto;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: none;
+        background: transparent;
+        &:hover {
+            cursor: pointer;
+        }
+        @include media("<=wider-screen") {
+            top: auto;
+            bottom: -10px;
+        }
+    }
+    .slick-prev {
+        left: -10%;
+        @include media("<=wider-screen") {
+            left: 40%;
+        }
+        @include media("<=tablet") {
+            left: 30%;
+        }
+    }
+    .slick-next {
+        right: -10%;
+        @include media("<=wider-screen") {
+            right: 40%;
+        }
+        @include media("<=tablet") {
+            right: 30%;
+        }
+    }
+}
+.kd-blog-posts--social {
+    padding-top: 50px;
+    .slick-list {
+    }
+}
+
+.kd-interior-blog { // Section level
+
+    &__container { // Container level
+        padding: 40px 0;
+    }
+
+    &__button-container { // Button container underneath
+        margin-top: 40px;
+    }
+}
+
+.pagination {
+    width: 100%;
+    margin: 20px auto -40px;
+    @include media("<phone") {
+        width: 75%;
+    }
+
+    .page-numbers {
+        color: $color--orange;
+        font-weight: 400;
+        font-size: 24px;
+    }
+    .current {
+        color: $color--blue-slate;
+    }
+}

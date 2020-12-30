@@ -1,0 +1,122 @@
+.kd-section.kd-section--blog {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    & {
+        background-image: url( "../images/blog-page-hero-clouds.jpg" );
+    }
+
+    //IE10/11 only
+    @media screen and(-ms-high-contrast: active), (-ms-high-contrast: none) {
+        height: 599px;
+        align-items: center;
+    }
+    @include media("<=desktop") {
+        min-height: 500px;
+    }
+}
+.kd-section.kd-section--archive {
+    min-height: 500px;
+    padding-top: 80px;
+    justify-content: flex-start;
+    background-position: bottom;
+}
+
+.kd-blog {
+    &__title {
+        margin-bottom: 20px;
+        font-weight: 700;
+        @include media(">=desktop") {
+            font-size: 60px;
+            max-width: $max-width--container;
+        }
+    }
+    &__subtitle {
+        font-weight: 300;
+        text-transform: none;
+        color: $color--white;
+        display: block;
+        max-width: $max-width--container;
+        margin: 20px auto 0;
+        @include media(">=desktop") {
+            font-size: 30px;
+            // margin-bottom: 20px;
+        }
+        @include media("<=desktop") {
+            max-width: 90%;
+        }
+        @include media("<=phone") {
+            max-width: 100%;
+        }
+        p {
+            color: $color--white;
+        }
+    }
+    .kd-section--front-sky-banner {
+        max-width: $max-width--container;
+        margin: 40px auto;
+        border-radius: 0;
+        @include media(">desktop") {
+            border-radius: $border-radius--primary;
+        }
+    }
+    &__section-header {
+        margin-bottom: 20px;
+        h2 {
+            color: $color--orange;
+            margin-bottom: 0px;
+        }
+        @include media(">tablet") {
+            margin-bottom: 40px;
+        }
+    }
+    &__section-subheader {
+        max-width: $max-width--container;
+        margin: auto;
+        @include media(">tablet") {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    &__category-title {
+        color: $color--blue-slate;
+        text-transform: capitalize;
+        margin-bottom: 10px;
+        @include media(">tablet") {
+            font-size: 30px;
+            margin: 0;
+        }
+    }
+    &__category-link {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        &--appetizers {
+           justify-content: center;
+           margin-top: 20px;
+           @include media("<=desktop") {
+           }
+        }
+
+        &:after {
+            content: '';
+            background-image: url(../images/orange-arrow.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            position: relative;
+            width: 15px;
+            height: 15px;
+            margin-left: 15px;
+        }
+        @include media("<=tablet") {
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+    }
+}

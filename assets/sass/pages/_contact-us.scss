@@ -1,0 +1,111 @@
+.kd-section.kd-section--landing-hero.kd-section--contact-us-hero {
+    @include media("<tablet") {
+        min-height: auto;
+    }
+    .kd-banner-container {  
+        grid-template-rows: repeat(10, 1fr);
+        @include media("<=desktop") {
+            max-height: 800px;
+        }
+        @include media("<tablet") {
+            max-height: 500px;
+        }
+        .kd-banner-container__cloud-bg1 {
+            grid-row: 1 / 11;
+        }
+        .kd-banner-container__cloud-bg2 {
+            grid-row: 6 / 11;
+            background-position: top;
+            // @include media(">wider-screen") {
+            //     grid-row: 7 / 11;
+            // }
+        }
+        .kd-banner-container__text-block {
+            grid-row: 4;
+            @include media(">desktop") {
+                top: 250px;
+            }
+            @include media("<tablet") {
+                position: relative;
+                top: 0;
+            }
+            // @include media("<=xs-phone") {
+            //     top: 0;
+            // }
+        }
+    }
+}
+.kd-section--contact-us-cards {
+    // padding-top: 0;
+    // @include media("<=desktop") {
+    //     padding-bottom: 0;
+    //     margin-top: -50px;
+    // }
+    .kd-two-cards {
+        padding: 70px 0 60px;
+        @include media("<=tablet") {
+            padding: 20px 0;
+        }
+    }
+}
+
+.kd-title--alt-margin {
+    margin: 40px auto -30px;
+    &--second {
+        margin: -30px auto 20px;
+    }
+	@include media("<=tablet") {
+		margin: 0;
+    }
+}
+
+.kd-section--contact-us {
+    overflow: hidden;
+    @include media("<=desktop") {
+        padding-top: 0;
+    }
+}
+.kd-contact-us__container {
+    max-width: $max-width--1350;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-auto-rows: 1fr;
+    -ms-grid-columns: minmax(280px, 1fr) minmax(280px, 1fr);
+    -ms-grid-rows: 1fr;
+    grid-gap: 40px;
+    justify-content: space-between;
+    @include media("<=desktop") {
+        align-items: center;
+    }
+}
+.kd-contact-us__profile-card-container {
+    margin: 0;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+}
+.kd-contact-us__profile-card {
+    width: 100%;
+    max-width: 540px;
+    margin: -40px auto 50px;
+    @include media("<=desktop") {
+        margin-top: 0;
+    }
+
+}
+.kd-contact-us__form {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    .kd-text--orange {
+        text-align: left;
+        margin-bottom: 20px;
+    }
+}
+
+.kd-contact-us__mountain {
+    width: 410px;
+    height: 200px;
+
+    @include media("<phone") {
+        height: 140px;
+    }
+}

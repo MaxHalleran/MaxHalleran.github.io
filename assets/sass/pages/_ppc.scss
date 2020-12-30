@@ -1,0 +1,13 @@
+.kd-ppc-header__under-banner {
+	max-width: $max-width--inner-content;
+	margin-top: -50px;
+	background-color: $color--white;
+	z-index: 2;
+	position: relative;
+
+	&-subtitle {
+		font-weight: 700;
+		font-size: 30px;
+		color: $color--blue-slate;
+	}
+}

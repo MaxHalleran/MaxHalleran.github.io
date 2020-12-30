@@ -1,0 +1,94 @@
+.kd-section--case-study-results {
+	margin-top: 0;
+}
+
+.kd-case-study-results {
+	display: flex;
+	flex-direction: row;
+	align-items: stretch;
+	justify-content: space-between;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin: 0 -20px -40px;
+
+	&__card {
+		padding: 40px 20px;
+		border-radius: $border-radius--primary;
+		width: calc(33% - 40px);
+		min-width: 300px;
+		margin: 0 20px 40px;
+
+		&:nth-child(4n + 1) {
+			background: $color-gradient--blue-dark-light;
+		}
+
+		&:nth-child(4n + 2) {
+			background: $color-gradient--orange-yellow;
+		}
+
+		&:nth-child(4n + 3) {
+			background: $color-gradient--green;
+		}
+
+		&:nth-child(4n) {
+			background: linear-gradient(
+				to right,
+				$color--blue-slate,
+				$color--blue-slate-light
+			);
+		}
+	}
+
+	&__percent-wrapper {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__arrow {
+		content: url("../images/green-up-arrow-icon.svg");
+		height: 25px;
+		width: 25px;
+		margin-right: 10px;
+	}
+
+	&__percent {
+		font-size: 50px;
+		color: $color--white;
+		font-weight: 900;
+		margin-bottom: 0;
+		line-height: 1.2;
+	}
+
+	&__outcome {
+		color: $color--white;
+	}
+}
+
+.kd-case-study-content {
+	display: flex;
+	flex-direction: row;
+	align-items: stretch;
+	justify-content: space-between;
+
+	&__column {
+		text-align: left;
+	}
+
+	@include media ("<tablet") {
+		flex-direction: column;
+
+		&__column {
+			width: 100%;
+
+			&:not(:last-child) {
+				margin-bottom: 60px;
+			}
+		}
+
+		&__title {
+			text-align: center;
+		}
+	}
+}

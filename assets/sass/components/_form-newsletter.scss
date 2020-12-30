@@ -1,0 +1,74 @@
+.kd-form--newsletter-container {
+    position: relative;
+    padding: 30px;
+    border-radius: 5px;
+    background-image: $color-gradient--blue-dark-light-top;
+    .gform_body ul {
+        margin-bottom: 0;
+        margin-left: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+    .kd-form--newsletter-container__title {
+        font-size: 22px;
+        color: $color--white;
+        text-align: left;
+        margin: 0 0 10px;
+        }
+        .kd-form--newsletter-container__highlighted-title {
+            background: #ffffff;
+            color: #1cadee;
+        }
+        .kd-form--newsletter-container__post-text {
+            color: #ffffff;
+            font-size: 12px;
+            font-weight: 200;
+
+            &-link {
+                text-decoration: underline;
+                color: #ffffff;
+            }
+    }
+
+    &__animated-man {
+        margin: 0 -30px;
+        width: calc(100% + 60px);
+        max-width: calc(100% + 60px);
+    }
+
+    #gform_wrapper_2 {
+        input {
+            width: 100%;
+            border-radius: 5px;
+        }
+        #input_2_1 {
+            height: 50px;
+        }
+        .gfield {
+            margin-bottom: 10px;
+        }
+        .gform_button {
+            padding: 20px;
+            font-size: 18px;
+        }
+    }
+
+    #gform_2 #gform_submit_button_2 {
+        position: relative;
+        margin: 0 -30px;
+        background-color: unset;
+        padding: 0;
+        width: calc(100% + 60px);
+        height: auto;
+        max-height: unset;
+        @include media("<=desktop") {
+            margin: 0;
+            width: auto;
+            height: 150px;
+        }
+        @include media("<=phone") {
+            width: 100%;
+            height: auto;
+        }
+    }
+}

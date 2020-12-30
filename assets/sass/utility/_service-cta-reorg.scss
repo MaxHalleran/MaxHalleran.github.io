@@ -1,0 +1,16 @@
+.kd-cloud-background {
+	background-image:
+		url('../images/bg-clouds-alone-top.png'),
+		url('../images/bg-clouds-alone-bottom.png'),
+		url('../images/bg-mid-no-clouds.jpg');
+	background-size: 100%, 100%,100% 100%;
+	background-position: center top, center bottom, center center;
+	background-repeat: no-repeat, no-repeat, repeat-y;
+	position: relative;
+	z-indeX: 1;
+	display: block;
+}
+
+.kd-no-background {
+	background: none !important;
+}

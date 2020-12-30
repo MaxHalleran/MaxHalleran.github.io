@@ -1,0 +1,212 @@
+.kd-careers__top-section {
+	@media (max-width: 1024px) {
+		margin-top: -100px;
+	}
+}
+
+.kd-careers-pg {
+	&__dots-bg {
+		max-width: none;
+		background-position: top 0 left 0, bottom 40px right 0;
+
+		@include media(">1600") {
+			padding-top: 80px;
+		}
+	}
+}
+
+.kd-careers {
+	&__content {
+		display: flex;
+		flex-direction: column;
+		align-items: stretch;
+		justify-content: center;
+
+		&-title {
+			margin-right: 0;
+			margin-left: 0;
+			max-width: unset;
+		}
+	}
+
+	&__splash {
+		img {
+			max-width: 400px;
+		}
+	}
+}
+
+.kd-careers-section {
+	&--graph {
+		background-image:
+			url( "../images/background-top-clouds.png" ),
+			url( "../images/background-bottom-clouds.png" ),
+			url( "../images/background-blue-gradient-no-clouds.jpg" );
+		background-size:
+			100%,
+			100%,
+			cover;
+		background-position: top, bottom, center;
+		background-repeat: no-repeat, no-repeat, no-repeat;
+
+		padding-top: 200px;
+		padding-bottom: 200px;
+		z-index: 9;
+
+		@media (max-width: 479px) {
+			background-size:
+				480px auto,
+				480px auto,
+				cover;
+		}
+	}
+
+	@media (max-width: 750px) {
+		&--graph {
+			padding-top: 100px;
+			padding-bottom: 100px;
+		}
+	}
+}
+
+.kd-graph {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: start;
+	justify-content: space-around;
+	justify-content: space-between;
+
+	&--content {
+		z-index: 1;
+		width: 50%;
+		max-width: 350px;
+		padding: 10px;
+
+		&-icon {
+			height: 45px;
+		}
+
+		&-title {
+			font-size: 40px;
+			color: #ffffff;
+			font-weight: bold;
+			text-transform: capitalize;
+			margin-bottom: 10px;
+		}
+
+		&-text {
+			color: #ffffff;
+		}
+	}
+
+	&--image {
+		z-index: 0;
+		padding: 0 100px;
+		margin: -140px auto;
+	}
+
+	@media (min-width: 750px) and (max-width: 1200px) {
+		&--image {
+			margin: calc(262.5px - 35vw) auto;
+			margin: calc(233.33px - 31.11vw) auto;
+		}
+	}
+
+	@media (max-width: 750px) {
+		&--content {
+			margin-bottom: 20px;
+		}
+
+		&--image {
+			margin: 0 auto 20px;
+			padding: 0;
+		}
+	}
+
+	@media (max-width: 500px) {
+		flex-direction: row;
+
+		&--content {
+			width: 100%;
+			max-width: none;
+		}
+	}
+}
+
+.kd-careers__postings-section {
+	padding-top: 80px;
+	padding-bottom: 80px;
+	background-position: top 40px left 0, bottom 40px right 0; 
+	max-width: none;
+}
+
+.kd-postings {
+
+	&__title {
+		text-align: left;
+		margin-right: 0;
+		margin-left: 0;
+		max-width: none;
+
+		@at-root h2#{&} {
+			font-size: 45px;
+			margin-bottom: 80px;
+		}
+
+		@at-root h3#{&} {
+			color: #394A5C;
+			font-size: 35px;
+			border-bottom: 1px solid #d7dbdf;
+			padding-bottom: 40px;
+			margin-bottom: 40px;
+		}
+
+		@at-root h4#{&} {
+			margin-bottom: 10px;
+			text-transform: capitalize;
+			font-weight: normal;
+			font-size: 22px;
+		}
+
+		@media (max-width: 767px) {
+			@at-root h2#{&} {
+				font-size: 35px;
+				margin-bottom: 60px;
+			}
+
+			@at-root h3#{&} {
+				font-size: 28px;
+			}
+		}
+	}
+
+	&__category {
+		margin-bottom: 80px;
+	}
+
+	&__container {
+		margin-bottom: 40px;
+		position: relative;
+	}
+
+	&__text {
+		text-align: left;
+		color: #929CA6;
+		font-size: 18px;
+	}
+
+	&__icon {
+		position: absolute;
+		right: 0;
+		font-size: 40px;
+		top: calc(50% - 10px);
+		color: #354a5e;
+	}
+
+	@media (max-width: 450px) {
+		&__container {
+			padding-right: 50px;
+		}
+	}
+}

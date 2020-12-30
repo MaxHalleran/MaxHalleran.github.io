@@ -1,0 +1,134 @@
+@mixin blue-darkslate-overlay {
+	background-color: $color--blue-darkslate-overlay;
+	@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+		background-color: $color--blue-darkslate-overlay--ie;
+	}
+}
+
+@mixin box-shadow($x: 0, $y: 0 ,$blur: 11px, $spread: 15px) {
+	box-shadow: $x $y $blur $spread rgba(0,0,0,0.13);
+}
+
+@mixin border($width: $border-width, $style: $border-style, $color: $color--white) {
+	border: $width $style $color;
+}
+
+@mixin background-image( $image_name, $format: ".png", $is_section: false ) {
+	& {
+		background-image: url( $image_name + $format);
+	}
+}
+
+@mixin cloud-bg( $main-bg: "../images/seo-results-bg-full", $mobile-bg: "../images/bg-clouds-top-bottom-mobile", $breakpoint: "<widescreen", $top: true, $bottom: true ) {
+	background-size: cover;
+	background-position: center;
+
+	@include media( $breakpoint ) {
+		@if $top and not $bottom {
+			background-size: 
+				100%,
+				100% 100%,
+				auto calc(100% + 300px);
+			background-position: 
+				top,
+				center,
+				center;
+			background-repeat: 
+				no-repeat, 
+				no-repeat, 
+				no-repeat;
+		} @else if $bottom and not $top {
+			background-size: 
+				100%,
+				100% 100%,
+				auto calc(100% + 300px);
+			background-position: 
+				bottom,
+				center,
+				center;
+			background-repeat: 
+				no-repeat, 
+				no-repeat, 
+				no-repeat;
+		} @else {
+			background-size: 
+				100%,
+				100%,
+				100% 100%,
+				auto calc(100% + 300px);
+			background-position: 
+				top,
+				bottom,
+				center,
+				center;
+			background-repeat: 
+				no-repeat, 
+				no-repeat, 
+				no-repeat, 
+				no-repeat;
+		}
+	}
+
+	@include media("<phone") {
+		@if $top and not $bottom {
+			background-size: 
+				480px auto,
+				100% 100%,
+				auto calc(100% + 300px);
+		} @else if $bottom and not $top {
+			background-size: 
+				480px auto,
+				100% 100%,
+				auto calc(100% + 300px);
+		} @else {
+			background-size: 
+				480px auto,
+				480px auto,
+				100% 100%,
+				auto calc(100% + 300px);
+		}
+	}
+
+	// Images
+	& {
+		background-image: url( $main-bg + ".jpg" );
+
+		@include media( $breakpoint ) {
+			@if $top and not $bottom {
+				background-image:
+					url("../images/bg-clouds-alone-top.png"),
+					linear-gradient(
+						to top,
+						#ffffff 5px,
+						transparent 5px,
+						transparent calc(100% - 5px),
+						#ffffff calc(100% - 5px)
+						),
+					url( $mobile-bg + ".jpg" );
+			} @else if $bottom and not $top {
+				background-image:
+					url("../images/bg-clouds-alone-bottom.png"),
+					linear-gradient(
+							to top,
+							#ffffff 5px,
+							transparent 5px,
+							transparent calc(100% - 5px),
+							#ffffff calc(100% - 5px)
+							),
+					url( $mobile-bg + ".jpg" );
+			} @else {
+				background-image:
+					url("../images/bg-clouds-alone-top.png"),
+					url("../images/bg-clouds-alone-bottom.png"),
+					linear-gradient(
+						to top,
+						#ffffff 5px,
+						transparent 5px,
+						transparent calc(100% - 5px),
+						#ffffff calc(100% - 5px)
+						),
+					url( $mobile-bg + ".jpg" );
+			}
+		}
+	}
+}

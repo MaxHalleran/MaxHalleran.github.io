@@ -1,0 +1,21 @@
+.kd-dots-bg {
+    background-image: url(../images/dot-pattern.svg), url(../images/dot-pattern.svg);
+    background-repeat: no-repeat;
+    background-size: 300px;
+    background-position: top left, bottom right;
+    max-width: 1350px;
+    margin: auto;
+    &--single {
+    background-image: url(../images/dot-pattern.svg);
+    background-repeat: no-repeat;
+    background-size: 300px;
+    background-position: bottom right;
+    max-width: 1350px;
+    &__left {
+        background-position: bottom left;
+    }
+        &:not(:last-child) {
+            margin-bottom: 40px;
+        }
+    }
+}

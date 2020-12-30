@@ -1,0 +1,68 @@
+.kd-section--process {
+	@include media("<desktop") {
+		padding-top: 0;
+	}
+}
+
+.kd-process {
+	margin-bottom: 40px;
+
+	&__card {
+		background: $color-gradient--blue-dark-light;
+		border-radius: $border-radius--primary;
+		padding: 40px 60px;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		max-width: $max-width--inner-content;
+		margin: 0 auto;
+	}
+
+	&__list {
+		width: calc(50%);
+
+		&:first-child {
+			margin-right: 40px;
+		}
+
+		&-item {
+			text-align: left;
+			list-style: none;
+			display: flex;
+			flex-direction: row;
+			margin-bottom: 20px;
+			font-size: 22px;
+
+			&:before {
+				content: "";
+				background-image: url("../images/check-icon.svg");
+				background-position: center top;
+				background-size: contain;
+				background-repeat: no-repeat;
+				min-height: 30px;
+				min-width: 30px;
+				margin-right: 20px;
+			}
+		}
+	}
+
+	@include media("<tablet") {
+		&__card {
+			flex-direction: column;
+		}
+
+		&__list {
+			width: 100%;
+
+			&:first-child {
+				margin-right: 0;
+			}
+		}
+	}
+
+	@include media("<phone") {
+		&__card {
+			padding: 40px 20px;
+		}
+	}
+}

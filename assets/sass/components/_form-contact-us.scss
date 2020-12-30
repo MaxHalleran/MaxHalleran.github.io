@@ -1,0 +1,29 @@
+.kd-contact-us__form {
+    .gform_fields {
+        justify-content: space-between;
+    }
+    input, textarea {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 20px;
+        font-size: 18px;
+        color: $color--gray;
+        border: 1px solid $color--straight-grey;
+        &::placeholder {
+            color: $color--gray;
+        }
+    }
+    #field_3_2, #field_3_3 {
+        @include media(">=tablet") {
+            width: 48%;
+        }
+    }
+    #gform_submit_button_3 {
+        color: $color--white;
+    }
+    .gform_confirmation_message_3 {
+        color: $color--gray;
+        font-size: 24px;
+        text-align: left;
+    }
+}

@@ -1,0 +1,200 @@
+.kd-container--profile-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: unset;
+     //IE10/11 only
+     @media screen and(-ms-high-contrast: active), (-ms-high-contrast: none) {
+        align-items: stretch;
+    }
+}
+
+.kd-container--profile-cards-horizontal {
+    max-width: $max-width--full !important;
+    padding-top: 40px;
+    padding-bottom: 0 !important;
+    border-bottom: 1px solid $color--blue-aqua;
+    &:first-child {
+        border-top: 1px solid $color--blue-aqua;
+    }
+}
+
+.kd-profile-card {
+    width: calc(50% - 40px);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 400px 1fr;
+    &__image {
+        grid-row: 1 / 3;
+        grid-column: 1;
+        z-index: 1;
+        margin: 0 auto;
+        height: 100%;
+        //IE10/11 only
+        @media screen and(-ms-high-contrast: active), (-ms-high-contrast: none) {
+            max-width: 400px;
+        }
+    }
+    &__bg {
+        grid-row: 2 / 3;
+        grid-column: 1;
+        border-radius: 25px 25px 0 0;
+        background-image: $color-gradient--blue-dark-light;
+        @include box-shadow(0px, -11px, 15px, 0px);
+    }
+    &__text-container {
+        position: relative;
+        grid-row: 3 / 4;
+        grid-column: 1;
+        padding: 40px 60px;
+        text-align: left;
+        border-radius: 0 0 25px 25px;
+        background-color: transparent;
+        @include box-shadow(0px, 11px, 15px, 0px);
+        &--white-bg {
+            background-color: $color--white;
+        }
+    }
+    &__name {
+        color: $color--orange;
+        font-size: 35px;
+        margin-bottom: 0;
+        max-width: 80%;
+        margin-left: 0;
+    }
+    &__title {
+        text-transform: uppercase;
+        max-width: 80%;
+        margin-left: 0;
+    }
+    &__link {
+        display: block;
+        position: absolute;
+        top: 40px;
+        right: 40px;
+        width: 60px;
+        height: 60px;
+        &--phone {
+            position: relative;
+            top: 0;
+            right: 0;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            color: $color--gray;
+            font-size: 24px;
+            font-weight: 700;
+            .kd-profile-card__link-image {
+                margin-right: 20px;
+            }
+        }
+    }
+    &__link-image {
+        width: 60px;
+    }
+    &__divider {
+        width: 60px;
+        margin: 0 0 20px;
+        border-color: #ea7531;
+        border-style: solid;
+    }
+    @include media("<=desktop") {
+        grid-template-rows: 50px 250px 1fr;
+        &__image {
+            max-height: 300px;
+            align-self: flex-end;
+        }
+        &__text-container {
+            padding: 30px 20px;
+        }
+        &__name {
+            font-size: 30px;
+        }
+        &__link {
+            top: 30px;
+            right: 20px;
+            &--phone {
+                top: 0;
+                right: 0;
+            }
+        }
+    }
+    @include media("<=tablet") {
+        width: 100%;
+        &:not(:last-child) {
+            margin-bottom: 40px;
+        }
+        &__link {
+            // position: relative;
+            // top: inherit;
+            // right: inherit;
+            width: 50px;
+            height: 50px;
+            margin-bottom: 20px;
+            &--phone {
+                width: 100%;
+            }
+        }
+    }
+    @include media("<phone") {
+        width: 100%;
+        &:not(:last-child) {
+            margin-bottom: 40px;
+        }
+    }
+}
+
+.kd-profile-card-horizontal {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: $max-width--container;
+    width: 100%;
+    &__image {
+        width: auto;
+        height: auto;
+        max-width: 50%;
+        max-height: 500px;
+        margin: 0;
+        align-self: flex-end;
+        &--right {
+            order: 2;
+        }
+        //IE10/11 only
+        @media screen and(-ms-high-contrast: active), (-ms-high-contrast: none) {
+            max-width: 600px;
+        }
+    }
+    &__text-container {
+        width: calc(50% - 40px);
+        display: flex;
+        flex-direction: column;
+        // justify-content: center;
+        margin-bottom: 40px;
+        padding: 0 60px;
+        box-shadow: none;
+        border-radius: 0;
+    }
+    &__link {
+        top: 0;
+    }
+    @include media("<=tablet") {
+        &__image {
+            max-width: 100%;
+            max-height: 300px;
+            order: 2;
+        }
+        &__text-container {
+            width: 100%;
+            padding: 0;
+            margin-top: 20px;
+        }
+    }
+    @include media("<=phone") {
+        .kd-profile-card__text {
+            display: none;
+        }
+    }
+}

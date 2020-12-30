@@ -1,0 +1,71 @@
+.kd-button {
+    display: inline-block;
+    color: $color--white;
+    text-transform: uppercase;
+    min-width: 25%;
+    @include media("<phone") {
+        width: 100%;
+    }
+}
+
+.kd-button--primary {
+    background: $color--orange;
+    font-size: 26px;
+    font-weight: 900;
+    padding: 20px 40px;
+}
+
+.kd-button--secondary {
+    background: $color--blue-slate;
+    font-weight: 600;
+    padding: 10px 30px;
+    border-radius: 25px;
+    @include media("<widescreen") {
+        font-size: 14px;
+    }
+}
+.kd-button--transparent {
+    background: rgba(0,0,0,0);
+    border: 2px solid $color--white;
+    &:hover {
+        background: $color--white;
+        color: $color--blue-slate-light;
+    }
+}
+// Styles for arrow version
+.kd-button {
+
+    @include media(">=phone") {
+        &--arrow {
+            display: inline-flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        &-text--arrow {
+            border-right: 1px solid rgba($color--white, 0.7);
+            padding-right: 20px;
+            margin-right: 20px;
+        }
+        &-arrow {
+            display: block;
+            min-height: 30px;
+            max-height: 30px;
+            min-width: 30px;
+            max-width: 30px;
+            background-size: cover;
+            @include background-image( "../images/arrow-right" );
+        }
+    }
+}
+
+// Styles for invisible placeholder in header
+// Under Development
+.kd-button__invisible {
+    // opacity: 0;
+    z-index: 10;
+    border: 3px solid red;
+
+    position: absolute;
+}

@@ -1,0 +1,30 @@
+.kd-simple-header {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+	justify-content: center;
+	background-image: url( "../images/blog-page-hero-clouds.jpg" );
+	color: #ffffff;
+	text-align: center;
+
+	&__title {
+		margin-bottom: 20px;
+        font-weight: 700;
+        @include media(">=desktop") {
+            font-size: 60px;
+            max-width: $max-width--container;
+        }
+	}
+
+    //IE10/11 only
+    @media screen and(-ms-high-contrast: active), (-ms-high-contrast: none) {
+        height: 599px;
+        align-items: center;
+    }
+    @include media("<=desktop") {
+        min-height: 500px;
+	}
+}

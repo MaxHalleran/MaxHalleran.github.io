@@ -1,0 +1,16 @@
+.kd-social-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.kd-social-icons__icon-container {
+        &:not(:first-child) {
+            margin-left: 10px;
+    }
+}
+.kd-social-icon {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+}

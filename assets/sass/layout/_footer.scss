@@ -1,0 +1,214 @@
+.kd-footer {
+	@include cloud-bg( $main-bg: "../images/divider-5", $mobile-bg: "../images/divider-5-mobile", $breakpoint: "<widescreen", $top: true, $bottom: false );
+
+	background-position: top; // reset background position to top
+	background-color: $color--white;
+	padding-bottom: 0;
+
+	&__cta {
+		padding-top: 100px;
+		padding-bottom: 150px;
+
+	@include media("<tablet") {
+		padding-top: 50px;
+		padding-bottom: 100px;
+	}
+
+	@include media("<phone") {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+
+		&-text {
+			color: $color--white;
+			margin-bottom: 20px;
+			text-transform: none;
+			&:last-of-type {
+				font-weight: 400;
+				padding-bottom: 30px;
+			}
+			@include media(">=tablet") {
+				font-size: 60px;
+			}
+		}
+	}
+
+	&__button {
+		padding-left: 100px;
+		padding-right: 100px;
+	}
+
+	&__nav {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: flex-start;
+		@include media(">desktop") {
+			padding-bottom: 0;
+		}
+
+		@include media("<=desktop") {
+			flex-wrap: wrap;
+		}
+
+		@include media("<tablet") {
+			padding-top: 40px;
+			border-top: 1px solid rgba($color--white, 0.15);
+		}
+
+		@include media("<phone") {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		&-element {
+			flex-grow: 1;
+			margin-bottom: 40px;
+
+			.kd-social-icons {
+				justify-content: flex-end;
+			}
+
+			@include media("<=desktop") {
+				flex-grow: unset;
+			}
+
+			@include media("<tablet") {
+				width: 50%;
+				margin-bottom: 0;
+				&:nth-last-child(-n + 2) {
+					margin-bottom: 20px;
+				}
+			}
+
+			@include media("<phone") {
+				width: 100%;
+				margin-bottom: 20px;
+
+				&:last-of-type {
+					margin-bottom: 0;
+				}
+			}
+
+			&:last-of-type {
+				flex-grow: 2;
+				text-align: end;
+
+				@include media("<=desktop") {
+					width: 100%;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+				}
+			}
+		}
+	}
+
+	&__menu-title {
+		color: $color--white;
+		text-align: left;
+		margin-bottom: 20px;
+
+		@include media("<phone") {
+			text-align: center;
+		}
+	}
+
+	&__menu {
+		text-align: left;
+
+		&-item {
+			line-height: 1.5;
+
+			@include media("<phone") {
+				text-align: center;
+			}
+		}
+	}
+
+	&__logo {
+		width: 350px;
+		margin-bottom: 20px;
+
+		@include media ("<tablet") {
+			max-width: 100%;
+			width: auto;
+		}
+	}
+
+	&__mountain {
+		&-container {
+			padding: 20px 0 40px;
+
+			@include media("<desktop") {
+				padding: 20px;
+			}
+		}
+
+		& {									// Nested inside of the container
+			width: 410px;
+			height: 200px;
+		}
+	}
+ 
+	&__copyright {
+		&-bar {
+			border-top: 1px solid rgba($color--white, 0.15);
+			padding: 30px 0;
+
+			@include media ("<tablet") {
+				padding: 20px 0;
+			}
+		}
+
+		&-text {
+			color: $color--white;
+		}
+	}
+}
+
+.kd-footer__cta--home {
+	padding-top: 350px;
+	padding-bottom: 150px;
+
+	@include media("<tablet") {
+		padding-bottom: 100px;
+	}
+
+	@include media("<phone") {
+		padding-bottom: 50px;
+	}
+}
+
+.kd-footer__cta-text--alt,
+.kd-footer__cta-text--alt:last-of-type {
+	text-transform: uppercase;
+	font-weight: 700;
+	max-width: $max-width--inner-content;
+	padding-bottom: 40px;
+}
+
+.kd-footer__button--alt:last-of-type {
+	margin-left: 40px;
+	margin-bottom: 0;
+}
+
+@include media("<widescreen") {
+	.kd-footer__button--alt {
+		margin-bottom: 40px;
+
+		&:last-of-type {
+			margin-left: 0;
+		}
+	}
+}
+
+
+@include media("<=widescreen") {
+	.kd-footer__cta__multiple-buttons {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+}

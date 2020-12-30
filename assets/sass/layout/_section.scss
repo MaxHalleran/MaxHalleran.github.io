@@ -1,0 +1,17 @@
+.kd-section {
+    position: relative;
+    padding: 40px 0;
+    z-index: 1;
+
+    &--same-background {
+        padding: 20px 0;
+
+        &-top {
+            padding: 20px 0 40px;
+        }
+
+        &-bottom {
+            padding: 40px 0 20px;
+        }
+    }
+}

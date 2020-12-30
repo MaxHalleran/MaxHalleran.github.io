@@ -1,0 +1,123 @@
+.kd-service {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: stretch;
+	@include media(">=tablet") {
+		margin-top: 40px;
+		margin-bottom: 40px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		.kd-column--half {
+			width: calc(46%);
+			margin: auto;
+		}
+	}
+
+	&__splash {
+		@include media("<tablet") {
+			order: 2;
+		}
+	}
+
+	&__content {
+		@include media("<tablet") {
+			order: 1;
+			padding: 0 20px;
+			margin-bottom: 40px;
+		}
+	}
+	
+	&__title {
+		text-align: left;
+		font-weight: 800;
+		text-transform: none;
+		color: $color--blue-slate;
+		margin-bottom: 20px;
+	}
+
+	&__nested-list {
+		display: flex;
+
+		@include media ("<phone") {
+			flex-direction: column;
+		}
+	}
+
+	&__list {
+		list-style-type: none;
+		margin-bottom: 40px;
+
+		&-item {
+			font-weight: 700;
+			text-align: start;
+			display: flex;
+			align-items: flex-start;
+			margin-bottom: 20px;
+			line-height: 1.5;
+
+			&-checkmark {
+				border-radius: 50%;
+				height: 24px;
+				width: 24px;
+				padding: 4px;
+				margin-right: 20px;
+				margin-top: 3px;
+				background-color: $color--orange;
+			}
+		}
+
+		&--nested {
+			@include media(">=phone") {
+				width: 50%;
+				padding-right: 20px;
+			}
+
+			@include media("<phone") {
+				&:not(:last-child) {
+					margin-bottom: 0px;
+				}
+			}
+		}
+	}
+
+	&__text {
+		text-align: left;
+	}
+
+	@include media("<tablet") {
+		flex-direction: column;
+
+		.kd-column--half {
+			width: 100%;
+		}
+	}
+
+	&--single {
+		@include media(">=tablet") {
+			margin-top: 20px;
+			margin-bottom: 0px;
+		}
+	}
+}
+
+// Hide the splash on tablet styling
+
+.kd-service {
+	@include media("<=tablet") {
+		&--hide-splash-tablet {
+
+		}
+
+		&__splash--hide-splash-tablet {
+			display: none;
+		}
+
+		&__content--hide-splash-tablet {
+			margin: 0;
+		}
+	}
+}

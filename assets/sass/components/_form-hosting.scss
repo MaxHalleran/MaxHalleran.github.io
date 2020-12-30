@@ -1,0 +1,85 @@
+#gform_4 input[type="text"],
+#gform_4 input[type="email"],
+#gform_4 input[type="tel"],
+#gform_4 #input_4_11_1 {
+    color: $color--blue-slate;
+    width: 100%;
+    border-color: #c3c3c3;
+    background-color: #f3f3f3;
+    @include media(">=tablet") {
+        width: calc(50% - 8px);
+    }
+}
+
+#gform_4 #input_4_11_1,
+#gform_4 #input_4_11_5 {
+    margin-bottom: 10px;
+}
+
+#gform_4 label {
+    display: inline;
+    color: $color--blue-slate;
+    margin-bottom: .5rem;
+}
+#gform_4 .gfield_label {
+    display: inline-block;
+    font-weight: 700;
+}
+#gform_4 #input_4_7 {
+    width: calc(100% + 16px);
+}
+#gform_4 #input_4_7 span {
+    display: inline-block;
+    width: 100%;
+    padding-right: 16px;
+    margin-right: -4px;
+    @include media(">=tablet") {
+        width: 50%;
+    }
+}
+#gform_4 #input_4_7 input {
+    width: 100%;
+}
+#gform_4 #input_4_7 span label {
+    display: block;
+}
+#gform_4 .gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) {
+    font-size: 13px;
+    font-family: Arial,Helvetica,sans-serif;
+}
+
+#gform_4 #gf_coupon_button.button {
+    color: $color--blue-slate;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonface;
+    border-image: initial;
+    background-color: buttonface;
+    cursor: pointer;
+}
+
+#gform_4 .gform_wrapper .gfield textarea {
+    border-color: #c3c3c3;
+    background-color: #f3f3f3;
+    color: $color--blue-slate;
+}
+
+#gform_4 .jcf-select {
+	color: #121212;
+}
+
+#gform_submit_button_4 {
+    @include media(">=tablet") {
+        width: calc(50% - 8px);
+    }
+}
+
+#gform_4 #input_4_11_1,
+#gform_4 #input_4_11_5 {
+    margin-bottom: 10px;
+}
+
+#gform_4 #input_4_11_1_label,
+#gform_4 #input_4_11_5_label {
+    display: block;
+}

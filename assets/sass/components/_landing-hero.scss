@@ -1,0 +1,270 @@
+.kd-section {
+    &.kd-section--landing-hero {
+        position: relative;
+        z-index: 0;
+        background-color: #ffffff;
+        background: none;
+        color: #ffffff;
+        padding: 0 0 0;
+        text-transform: none;
+        text-align: center;
+        @include media("<desktop") {
+            padding: 0 0 0;
+        }
+        @include media("<tablet") {
+            min-height: 800px;
+        }
+        .kd-banner-container {
+            display: -ms-grid;
+            display: grid;
+            -ms-grid-columns: 1fr;
+            -ms-grid-rows: 1fr 1fr 1fr 1fr 50px 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(5,1fr) 50px repeat(5,1fr);
+            height: 1085px;
+            max-width: 100%;
+            padding: 0;
+            // background: transparent;
+            @include media("<=desktop"){
+                max-height: 100%;
+                min-height: unset;
+                height: 1075px
+            }
+            @include media("<=tablet"){
+                height: 950px;
+            }
+            @include media("<=xs-phone"){
+                height: 1000px;
+            }
+            &__cloud-bg1 {
+                -ms-grid-column: 1;
+                -ms-grid-row: 1;
+                -ms-grid-row-span: 12;
+                grid-column: 1;
+                grid-row: 1 / 12;
+                background-size: inherit;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                z-index: 0;
+                position: relative;
+                @include media(">=1600") {
+                    background-position: 50% 20% !important; // TODO: remove !important once able to
+                }
+                // @include media(">=max-width") {
+                //     background-position: center;
+                // }
+                @include media (">=massive-screen") {
+                    background-size: contain;
+                }
+                @include media ("<tablet") {
+                    background-size: inherit;
+                    background-attachment: fixed;
+                    background-position: top;
+                }
+            }
+            &__cloud-bg2 {
+                -ms-grid-column: 1;
+                -ms-grid-row: 7;
+                -ms-grid-row-span: 12;
+                grid-column: 1;
+                grid-row: 7 / 12;
+                background-size: cover;
+                background-position: top;
+                background-repeat: no-repeat;
+                z-index: 1;
+                pointer-events: none;
+                // margin-top: 20px;
+                position: relative;
+                @include media("<wider-screen") {
+                    grid-row: 7 / 12;
+                    -ms-grid-row: 7;
+                }
+                @include media("<tablet") {
+                    display: block;
+                }
+            }
+            &__text-block {
+                grid-column: 1;
+                grid-row: 2;
+                position: fixed;
+                top: 17%;
+                left: 0;
+                width: 100%;
+                z-index: 0;
+                @include media("<=xs-phone"){
+                    top: 11%;
+                    @media screen and (orientation: landscape) {
+                        top: 90px;
+                    }
+                }
+                @include media("<tablet"){
+                    position: fixed;
+                    top: 15%;
+                    padding: 0 15px;
+                }
+                @include media("<desktop") {
+                    @media screen and (orientation: landscape) {
+                        top: 90px;
+                    }
+                }
+                @include media(">=desktop"){
+                    top: 150px;
+                }
+            }
+            &__title {
+                text-transform: uppercase;
+                margin: 0 auto 40px;
+                font-size: 60px;
+                font-weight: 900;
+                max-width: 750px;
+                @include media("<tablet") {
+                    font-size: 45px !important; // TODO: remove !important once able to
+                    margin-bottom: 30px;
+                }
+                @include media("<phone") {
+                }
+            }
+            &__sub-title {
+                display: block;
+                color: $color--white;
+                margin: 0 auto 40px;
+                font-size: 22px;
+                font-weight: 300;
+                max-width: 750px;
+            }
+            &__button {
+                min-width: 300px;
+                margin-top: 20px;
+
+                @include media("<phone") {
+                    min-width: 240px;
+                }
+            }
+        }
+        &--short {
+            .kd-banner-container {
+                height: 925px;
+            }
+        }
+        &--shorter {
+            .kd-banner-container {
+                height: 900px;
+                @include media("<tablet") {
+                    height: 750px;
+                    &__cloud-bg2 {
+                        grid-row: 6 / 12;
+                    }
+                }
+            }
+        }
+        &--tall {
+            .kd-banner-container {
+                @include media("<=desktop") {
+                    height: 1200px;
+                    @media screen and (orientation: landscape) {
+                        height: 900px;
+                        &__text-block {
+                            position: relative;
+                            grid-row: 1;
+                        }
+                        &__cloud-bg2 {
+                            grid-row: 5 / 12;
+                        }
+                    }
+                }
+                @include media("<=tablet") {
+                    height: 1000px;
+                }
+                @include media("<=phone") {
+                    height: 1175px;
+                }
+                @include media("<=xs-phone"){
+                    height: 1150px;
+                    &__text-block {
+                        position: relative;
+                        top: 5%;
+                        @media screen and (orientation: landscape) {
+                            top: 90px;
+                        }
+                    }
+                    &__cloud-bg2 {
+                        grid-row: 5 / 12;
+                    }
+                }
+            }
+        }
+        .landing-page-accolades {
+            max-width: 1230px;
+            background-color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            z-index: 2;
+            position: relative;
+            padding: 0 20px;
+            margin: auto;
+            @include media(">max-width"){
+                padding: 50px 20px;
+            }
+            @include media("<widescreen"){
+                margin-top: -50px;
+            }
+            @include media("<tablet"){
+                margin-top: -100px;
+            }
+            img {
+                // margin: 0 50px 0 0;
+                @include media("<tablet"){
+                    width: 125px;
+                    margin: 0 10px 20px 0;
+                }
+                @include media("<phone"){
+                    &:first-child {
+                        order: 3;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+        &:after{
+            content: none;
+        }
+        & .kd-banner-container {
+            &__cloud-bg1 {
+                background-image: url( "../images/top-cloud-bg1.png" );
+            }
+            &__cloud-bg2 {
+                background-image: url( "../images/top-cloud-bg2-2.png" );
+            }
+        }
+    }
+}
+
+.kd-banner-container {
+    &__cta--multiple {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: space-evenly;
+        max-width: $max-width--inner-content;
+        margin: 0 auto;
+        flex-wrap: wrap;
+
+        .kd-banner-container__button {
+            margin: 0 20px 40px;
+        }
+
+        @include media("<tablet") {
+            // Rules for tablet size
+                
+        }
+    }
+}
+
+.kd-interior-hero {
+    @include media("<tablet") {
+        margin-bottom: -100px;
+    }
+}

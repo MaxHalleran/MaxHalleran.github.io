@@ -1,0 +1,112 @@
+h1 {
+    font: 400 45px roboto, Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+	margin: 0 auto 40px;
+	max-width: $max-width--inner-content;
+
+	@include media("<desktop") {
+		font-size: 28px;
+	}
+	
+	@include media("<tablet") {
+		font-size: 26px;
+	}
+}
+h2 {
+	font: 700 45px roboto, Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+	color: #354a5e;
+	margin: 0 auto 40px;
+	max-width: $max-width--inner-content;
+
+	@include media("<desktop") {
+		font-size: 28px;
+	}
+	
+	@include media("<tablet") {
+		font-size: 26px;
+	}
+}
+h3 {
+    font: 700 22px roboto, Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+	color: $color--white;
+	margin: 0 auto 40px;
+	max-width: $max-width--inner-content;
+
+	@include media("<desktop") {
+		font-size: 28px;
+	}
+	
+	@include media("<tablet") {
+		font-size: 26px;
+	}
+}
+h4 {
+    font: 700 20px roboto, Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+	color: #354a5e;
+	margin: 0 auto 40px;
+	max-width: $max-width--inner-content;
+
+	@include media("<desktop") {
+		font-size: 28px;
+	}
+	
+	@include media("<tablet") {
+		font-size: 26px;
+	}
+}
+h5 {
+    font: 700 18px roboto, Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+	color: #353434;
+	margin: 0 auto 40px;
+	max-width: $max-width--inner-content;
+
+	@include media("<desktop") {
+		font-size: 28px;
+	}
+	
+	@include media("<tablet") {
+		font-size: 26px;
+	}
+}
+h6 {
+    font: 700 16px roboto, Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+	color: #354a5e;
+	margin: 0 auto 40px;
+	max-width: $max-width--inner-content;
+
+	@include media("<desktop") {
+		font-size: 28px;
+	}
+	
+	@include media("<tablet") {
+		font-size: 26px;
+	}
+}
+p {
+	color: $color--gray;
+	margin-bottom: 20px;
+	line-height: 1.5;
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+b {
+	font-weight: 700;
+}
+
+a {
+	color: $color--white;
+	text-decoration: none;
+	line-height: 1.5;
+	
+}
+
+strong {
+	font-weight: 700;
+}

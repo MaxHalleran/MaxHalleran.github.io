@@ -1,0 +1,36 @@
+.kd-text--orange {
+    color: $color--orange;
+}
+.kd-text--white {
+	color: $color--white;
+}
+.kd-text--grey {
+	color: $color--gray;
+}
+.kd-text--blue-slate {
+	color: $color--blue-slate
+}
+.kd-text--font-weight-normal {
+	font-weight: 400;
+}
+.kd-text--font-weight-bold {
+	font-weight: 700;
+}
+.kd-text--normal-case {
+	text-transform: initial;
+}
+.kd-text--link {
+	color: $color--orange !important;
+	text-decoration: underline;
+}
+.kd-h2--small {
+	display: block;
+	font-size: 35px;
+	font-weight: 300;
+	text-transform: initial;
+	margin-bottom: 20px;
+}
+.kd-h3--alt {
+	text-transform: unset;
+	font-size: 28px;
+}

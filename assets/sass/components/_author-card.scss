@@ -1,0 +1,60 @@
+.kd-section--author {
+    padding: 80px 0;
+}
+.kd-section--related-posts {
+    padding: 80px 0;
+}
+.kd-author {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: $max-width--inner-content;
+    @include media(">tablet") {
+        flex-wrap: nowrap;
+    }
+}
+
+.kd-author__name {
+    margin: 0;
+}
+.kd-author__specialization {
+    text-transform: uppercase;
+    font-size: 22px;
+}
+.kd-author__divider {
+        width: 60px;
+        margin: 0 auto 20px;
+        border-color: #ea7531;
+        border-style: solid;
+        @include media(">tablet") {
+            margin-left: 0;
+        }
+}
+.kd-author__avatar-container {
+    width: 235px;
+    flex-shrink: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    @include media(">tablet") {
+        margin: 0 60px 0 0;
+    }
+    img {
+        border-radius: $border-radius--secondary;
+    }
+}
+.kd-author__text-container {
+    flex-grow: 1;
+    @include media(">tablet") {
+        text-align: left;
+    }
+}
+.kd-author__cta {
+    width: 100%;
+    margin-bottom: 0;
+    font-weight: 600;
+    @include media(">desktop") {
+        text-align: left;
+    }
+}

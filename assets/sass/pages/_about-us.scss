@@ -1,0 +1,8 @@
+.kd-section--profile-cards {
+    background-color: $color--white;
+    padding: 0 0 80px;
+    @include media("<tablet") {
+        margin-top: -120px;
+        margin-bottom: 60px;
+    }
+}
