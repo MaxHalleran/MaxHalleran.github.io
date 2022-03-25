@@ -12,7 +12,7 @@ const minifyHtml = (cb) => {
 	return gulp
 		.src("./src/*.html")
 		.pipe(htmlmin( minifyOptions ))
-		.pipe(gulp.dest('./build'));
+		.pipe(gulp.dest('./'));
 }
 
 module.exports = minifyHtml;
