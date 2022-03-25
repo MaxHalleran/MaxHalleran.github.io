@@ -1,0 +1,25 @@
+{
+  "name": "portfolio",
+  "version": "2.0.0",
+  "description": "portfolio of Max Halleran",
+  "main": "index.html",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaxHalleran/MaxHalleran.github.io.git"
+  },
+  "author": "Max Halleran",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MaxHalleran/MaxHalleran.github.io/issues"
+  },
+  "homepage": "https://github.com/MaxHalleran/MaxHalleran.github.io#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}
