@@ -36,14 +36,11 @@
 	<!-- Nav bar -->
 	<nav class="nav">
 		<div class="nav-header">
-			<a class="nav-header__link" href="#top">
+			<a class="nav-header__link" href="#">
 				<img class="nav-header__logo" src="./public/images/mh-logo.png" alt="M">
 				<p class="nav-header__name">Max</p>
 				<p class="nav-header__title">Web Developer</p>
 			</a>
-		</div>
-		<div class="nav__elem">
-			<a class="nav__link" href="#about">About</a>
 		</div>
 		<!-- Will add later -->
 		<!-- <div class="nav__elem">
@@ -51,6 +48,9 @@
 		</div> -->
 		<div class="nav__elem">
 			<a class="nav__link" href="#work">Work</a>
+		</div>
+		<div class="nav__elem">
+			<a class="nav__link" href="#about">About</a>
 		</div>
 		<div class="nav__elem">
 			<a class="nav__link" href="#contact">Contact</a>
@@ -70,22 +70,39 @@
 		</div>
 
 		<!-- Portfolio -->
-		<div class="portfolio">
-			<p>Portfolio</p>
-			<div class="project-card">
-				
+		<section id="work" class="section portfolio">
+			<h2 class="portfolio-title">Portfolio</h2>
+			<p class="portfolio-subtitle">A small collection of projects I've worked on over the years.</p>
+		</section>
+		<div class="project-deck">
+			<div class="project-card project-name-1">
+				<p>Project Title</p>
+				<a href="#">Link</a>
+			</div>
+			<div class="project-card project-name-2">
+				<p>Project Title</p>
+				<a href="#">Link</a>
+			</div>
+			<div class="project-card project-name-3">
+				<p>Project Title</p>
+				<a href="#">Link</a>
+			</div>
+			<div class="project-card project-name-4">
+				<p>Project Title</p>
+				<a href="#">Link</a>
 			</div>
 		</div>
 
 		<!-- About -->
-		<div class="about">
-			<p>About Me!</p>
-		</div>
+		<section id="about" class="section about">
+			<h2>Me, Myself and I</h2>
+			<p></p>
+		</section>
 
 		<!-- Contact -->
-		<div class="contact">
-			<p>Contact</p>
-		</div>
+		<section id="contact" class="section contact">
+			<h2>Contact</h2>
+		</section>
 	</div>
 </body>
 

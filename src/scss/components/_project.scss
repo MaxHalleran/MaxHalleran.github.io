@@ -1,0 +1,13 @@
+.project-deck {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.project-card {
+	width: calc(25vw - 37.5px);
+	height: calc(25vw - 37.5px);
+	border: 1px solid white;
+}
