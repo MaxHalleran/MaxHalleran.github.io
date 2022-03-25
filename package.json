@@ -3,6 +3,7 @@
 	"version": "2.0.0",
 	"description": "portfolio of Max Halleran",
 	"main": "index.html",
+	"type": "commonjs",
 	"directories": {
 		"doc": "docs"
 	},

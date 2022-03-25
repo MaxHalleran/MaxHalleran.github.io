@@ -1,10 +1,9 @@
-const gulp = require('gulp');
+const { series, watch, parallel } = require('gulp');
 
 const compileScripts = require("./scripts");
 const compileSass = require("./sass");
-const compileHTML = require("./html");
+const { minifyHtml } = require("./html");
 const migrateDocs = require("./assets");
-const { series } = require('gulp');
 
 function defaultTask(cb) {
 	console.log("This is the default task for the personal portfolio.");
@@ -14,17 +13,28 @@ function defaultTask(cb) {
 
 exports.default = defaultTask;
 exports.sass = compileSass;
-exports.html = compileHTML;
+exports.html = minifyHtml;
 exports.docs = migrateDocs;
 exports.scripts = compileScripts;
 
-function buildFull(cb) {
-	console.log("Building entire site");
+exports.buildFull = series(compileSass, minifyHtml, compileScripts, migrateDocs);
 
-	console.log(compileSass);
+exports.watchHtml = () => {
+	console.log("Watching HTML");
 
-	series(compileSass, compileHTML, compileScripts, migrateDocs);
-	cb();
-}
+	return watch('./src/*.html', { ignoreInitial: false }, minifyHtml);
+};
 
-exports.buildFull = series(compileSass, compileHTML, compileScripts, migrateDocs);
+exports.watchJs = () => {
+	console.log("Watching JS");
+
+	return watch('./src/scripts/*.js', { ignoreInitial: false }, compileScripts);
+};
+
+exports.watchSass = () => {
+	console.log("Watching CSS");
+
+	return watch('./src/**/*.scss', { ignoreInitial: false }, compileSass);
+};
+
+exports.watch = parallel( this.watchHtml, this.watchJs, this.watchSass );
