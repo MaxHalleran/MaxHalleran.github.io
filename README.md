@@ -1,6 +1,6 @@
 # Welcome to my portfolio !
 
-This read me is a collection of my thoughts on the project, just somewhere where I can keep track of what I'm working on and my goals with this project.
+I am Max, a developer from Calgary, Canada and this is my portfolio.
 
 ## MVP
 

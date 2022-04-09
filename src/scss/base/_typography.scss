@@ -1,25 +1,51 @@
 h1 {
-    font: 700 65px roboto, Arial, Helvetica, sans-serif;
-	color: white;
+	font-family: 'Rubik', sans-serif;
+	font-weight: 600;
+	font-size: 80px;
+	color: #ffffff;
+	line-height: 1;
 }
-h2 {
-	font: 700 45px roboto, Arial, Helvetica, sans-serif;
-	color: white;
+h2 {	
+	font-family: 'Rubik', sans-serif;
+	font-weight: 600;
+	font-size: 45px;
+	color: #ffffff;
+	line-height: 1;
 }
 h3 {
-    font: 700 30px roboto, Arial, Helvetica, sans-serif;
+	font-family: 'Rubik', sans-serif;
+	font-weight: 600;
+	font-size: 32px;
+	color: #ffffff;
+	line-height: 1;
 }
 h4 {
-    font: 700 24px roboto, Arial, Helvetica, sans-serif;
+	font-family: 'Rubik', sans-serif;
+	font-weight: 600;
+	font-size: 28px;
+	color: #ffffff;
+	line-height: 1;
 }
 h5 {
-    font: 700 20px roboto, Arial, Helvetica, sans-serif;
+	font-family: 'Rubik', sans-serif;
+	font-weight: 600;
+	font-size: 24px;
+	color: #ffffff;
+	line-height: 1;
 }
 h6 {
-    font: 700 18px roboto, Arial, Helvetica, sans-serif;
+	font-family: 'Rubik', sans-serif;
+	font-weight: 600;
+	font-size: 20px;
+	color: #ffffff;
+	line-height: 1;
 }
 
 p {
+	font-family: 'Karla', sans-serif;
+	font-size: 20px;
+	color: #ffffff;
+
 	margin-bottom: 20px;
 	line-height: 1.5;
 	color: white;
@@ -33,9 +59,11 @@ b {
 }
 
 a {
+	font-family: 'Karla', sans-serif;
+	font-size: 20px;
+	color: #ffffff;
+
 	text-decoration: none;
-	color: unset;
-	color: white;
 }
 
 strong {

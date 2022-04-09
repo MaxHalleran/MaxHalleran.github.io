@@ -1,0 +1,9 @@
+.text-link {
+	color: red;
+
+	&:hover,
+	&:active,
+	&:focus {
+		color: purple;
+	}
+}

@@ -26,6 +26,15 @@ $text-color: #ffffff !default;
 /// @type Color
 $brand-color: #1d1d1d !default;
 
+/// Neon Purple
+/// @type Color
+$neon-purple: #B026FF !default;
+
+/// Neon Gradient
+/// @type Gradient
+$neon-gradient: linear-gradient(to top, #B026FF, #00C983);
+$neon-gradient-light: linear-gradient(to top, #B026FF, #99EDCC);
+
 
 
 /// Container's maximum width

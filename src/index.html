@@ -37,7 +37,7 @@
 	<nav class="nav">
 		<div class="nav-header">
 			<a class="nav-header__link" href="#">
-				<img class="nav-header__logo" src="./public/images/mh-logo.png" alt="M">
+				<img class="nav-header__logo" src="./public/images/m-logo-white.png" alt="M">
 				<p class="nav-header__name">Max</p>
 				<p class="nav-header__title">Web Developer</p>
 			</a>
@@ -56,29 +56,38 @@
 			<a class="nav__link" href="#contact">Contact</a>
 		</div>
 		<div class="nav__elem nav__footer">
-			<a class="nav__footer-icon" href="">Git</a>
-			<a class="nav__footer-icon" href="">Lin</a>
+			<a class="nav__footer-link" href="https://github.com/MaxHalleran"><img class="nav__footer-icon" src="./public/images/GitHub-Mark-Light-120px-plus.png" alt="Github"></a>
+			<a class="nav__footer-link" href="https://www.linkedin.com/in/max-halleran/"><img class="nav__footer-icon" src="./public/images/Li-logo-white.png" alt="LinkedIn"></a>
 		</div>
 	</nav>
 
 	<div class="main">
 		<!-- Splash Section -->
 		<div class="splash">
-			<h1 class="splash__title">Hi, <br />I'm Max, <br />Web Developer</h1>
+			<h1 class="splash__title">Hi, <br />I'm <span class="splash__title--accent">M</span>ax, <br />Web Developer</h1>
 			<p class="splash__subtitle">Full Stack / Mobile App Developer</p>
-			<a class="button button--contact">Contact Me</a>
+			<a class="button button--contact" href="#contact">Contact Me</a>
 		</div>
 
 		<!-- Portfolio -->
 		<section id="work" class="section portfolio">
-			<h2 class="portfolio-title">Portfolio</h2>
-			<p class="portfolio-subtitle">A small collection of projects I've worked on over the years.</p>
+			<h2 class="portfolio-title">My Portfolio</h2>
+			<p class="portfolio-subtitle">A small collection of projects I've worked on over the years. I've had the pleasure of both working with amazing people and taking projects on solo.</p>
+			<p class="portfolio-subtitle">If you're interested to see more of my work, <a class="text-link" href="#contact">contact me</a> for a more in depth list of projects.</p>
 		</section>
+
+
+
 		<div class="project-deck">
-			<div class="project-card project-name-1">
-				<p>Project Title</p>
-				<a href="#">Link</a>
+
+
+			<div class="project-card project-evrywork">
+				<a class="project-card__link" href="https://evrywork.com/">
+					<h3 class="project-card__title">Evrywork</h3>
+				</a>
 			</div>
+
+
 			<div class="project-card project-name-2">
 				<p>Project Title</p>
 				<a href="#">Link</a>
@@ -91,7 +100,11 @@
 				<p>Project Title</p>
 				<a href="#">Link</a>
 			</div>
+
+
 		</div>
+
+
 
 		<!-- About -->
 		<section id="about" class="section about">

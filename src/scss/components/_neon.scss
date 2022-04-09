@@ -1,0 +1,38 @@
+.neon {
+	&-letter {
+		
+		/// white center
+		color: #ffffff;
+		text-shadow:
+			0 0 7px #fff,
+			0 0 10px #fff,
+			0 0 21px #fff,
+			0 0 42px #B026FF,
+			0 0 82px #B026FF,
+			0 0 92px #B026FF,
+			0 0 102px #B026FF,
+			0 0 151px #B026FF;
+
+		// color: rgba(176, 38, 255, 0.1);
+		// text-shadow:
+		// 	0 0 7px #fff,
+		// 	0 0 10px rgba(176, 38, 255, 0.9),
+		// 	0 0 21px #fff,
+		// 	0 0 42px #B026FF,
+		// 	0 0 82px #B026FF,
+		// 	0 0 92px #B026FF,
+		// 	0 0 102px #B026FF,
+		// 	0 0 151px #B026FF;
+
+		text-shadow:
+			1px 0px 4px #FFD5FF,
+			2px 0px 4px #FFD5FF, 
+			3px 0px 4px #FFD5FF, 
+			2px 0px 3px #D42CCA, 
+			2px 3px 15px #D42CCA, 
+			2px 0px 15px, 
+			5px 0px 125px, 
+			20px 0vw 200px #D42CCA,
+			40px 0vw 200px #D42CCA;
+	}
+}
