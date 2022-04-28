@@ -44,110 +44,6 @@
   min-height: 573px;
 }
 
-/** The navbar section
-*/
-
-.navbar {
-  height: 15vh;
-  min-height: 83px;
-  border-top: 3px solid #795548;
-  justify-content: space-around;
-  align-items: center;
-  background-color: #ffffff;
-  font-size: 1.2em;
-}
-
-.navbar-title {
-  width: 35vw;
-}
-
-.navbar-title .name {
-  border: 1px solid black;
-
-  overflow: hidden;
-  font-family: 'Roboto Mono', monospace;
-  display: inline-block;
-  white-space: nowrap;
-  animation:
-    typing 1.5s steps(40, end) 1,
-    blinking .75s step-end 0s 5 normal forwards;
-}
-
-.navbar-title .name a {
-  color: #000000;
-  text-decoration: none;
-}
-
-.navbar-title .name a:hover {
-  animation: titleChange 1s ease 0s 1 alternate both;
-}
-
-.navbar-title p {
-  font-size: 1em;
-}
-
-.navbar-links {
-  height: 100%;
-  justify-content: space-around;
-  flex-wrap: nowrap;
-  width: 60vw;
-}
-
-.navbar-links a {
-  text-decoration: none;
-}
-
-.navbar-link {
-  display: flex;
-  align-items: center;
-  height: 100%;
-}
-
-.navbar-link:hover {
-  border-bottom: 3px solid #4b2c20;
-}
-
-.navbar-link-about {
-  color: #4b2c20;
-}
-
-.navbar-link-projects {
-  color: #000000;
-}
-
-a.navbar-link-email {
-  color: #bcbcbc;
-}
-
-a.navbar-link-email:hover {
-  color: #4b2c20;
-
-}
-
-@keyframes typing {
-  0% {
-    width: 0;
-    border-right: 1px solid black;
-  }
-  100% {
-    width: 100%;
-  }
-}
-
-@keyframes blinking {
-  from, to { border-color: transparent }
-  50% { border-right-color: black}
-}
-
-@keyframes titleChange {
-  from {
-    color: #000000;
-  }
-  to {
-    color: #795548;
-  }
-}
-
 /** The page header
 */
 
@@ -208,6 +104,10 @@ p.page-header-text a:hover {
   50% {
     transform: translate(0, 5px);
   }
+}
+
+.skills-container {
+  padding: 30px 0;
 }
 
 /** Projects Section
@@ -465,17 +365,15 @@ p.page-header-text a:hover {
   height: 13vh;
 }
 
+/***
+
+/// Breakpoints
+
+*/
+
 @media screen and (min-width: 1200px) {
 
   /* Header Section */
-  .navbar-title {
-    width: 40vw;
-  }
-
-  .navbar-links {
-    width: 40vw;
-  }
-
   .page-header {
     min-height: 650px;
   }
@@ -488,16 +386,6 @@ p.page-header-text a:hover {
 @media screen and (min-width: 1000px) and (max-width: 1199px) {
 
   /* Header Section */
-  .navbar-title {
-    width: 35vw;
-  }
-
-  .navbar-links {
-    justify-content: space-around;
-    flex-wrap: nowrap;
-    width: 60vw;
-  }
-
   .page-header {
     min-height: 680px;
   }
@@ -531,14 +419,6 @@ p.page-header-text a:hover {
 @media screen and (min-width: 800px) and (max-width: 999px) {
 
   /* Header */
-  .navbar-title p {
-    font-size: 0.9em;
-  }
-
-  .navbar-links {
-    font-size: 0.9em;
-  }
-
   .page-header-main .chevron-down {
     top: 2vh;
   }
@@ -574,36 +454,11 @@ p.page-header-text a:hover {
   }
 }
 
-@media screen and (max-width: 895px) {
-  .navbar-title-extender {
-    display: none;
-  }
-}
-
 @media screen and (max-width: 799px) {
 
   /* Header */
   #page-header {
     width: 100vw;
-  }
-
-  .navbar {
-    width: 100%;
-    font-size: 1em;
-    justify-content: space-between;
-  }
-
-  .navbar p.col-6 {
-    font-size: 0.8em;
-  }
-
-  .navbar-links {
-    width: 55%;
-    justify-content: space-between;
-  }
-
-  .navbar-link-email {
-    font-size: 0.8em;
   }
 
   .page-header-main {
@@ -681,28 +536,6 @@ p.page-header-text a:hover {
     line-height: 1.5;
   }
 
-  .navbar {
-    font-size: 1em;
-  }
-
-  .navbar-links {
-    justify-content: flex-end;
-  }
-
-  .navbar-link-about,
-  .navbar-link-projects {
-    display: none;
-    width: 0;
-  }
-
-  .navbar-link-email {
-    margin-right: 10px;
-  }
-
-  .navbar p.col-6 {
-    display: none;
-  }
-
   .page-header-main {
     min-height: 490px;
   }
@@ -748,24 +581,6 @@ p.page-header-text a:hover {
   .page {
     letter-spacing: .07em;
     line-height: 1;
-  }
-
-  .name-extension {
-    display: none;
-  }
-
-  .navbar {
-    justify-content: center;
-  }
-
-  .navbar-title {
-    width: auto;
-  }
-
-  .navbar-links {
-    width: 100%;
-    justify-content: center;
-    height: auto;
   }
 
   h3.page-header-text {

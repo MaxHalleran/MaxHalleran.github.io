@@ -1,0 +1,201 @@
+.navbar {
+	height: 115px;
+	min-height: 115px;
+	width: 100%;
+	padding: 0 30px;
+	
+	justify-content: space-between;
+	align-items: center;
+
+	border-top: 3px solid #795548;
+	background-color: #ffffff;
+	font-size: 1.2em;
+
+	&__title {
+
+		width: calc(35% - 30px);
+		height: 92px;
+		min-height: 92px;
+
+		&-name {
+			border: 1px solid black;
+			
+			overflow: hidden;
+			font-family: 'Roboto Mono',
+			monospace;
+			display: inline-block;
+			white-space: nowrap;
+			animation: typing 1.5s steps(40, end) 0s 1 forwards,
+			blinking .75s step-end 0s 5 normal forwards;
+
+			& a {
+				color: #000000;
+				text-decoration: none;
+
+				&:hover {
+					animation: titleChange 1s ease 0s 1 alternate both;
+				}
+			}
+		}
+
+		& p {
+			font-size: 1em;
+		}
+	}
+
+	&__links {
+		height: 100%;
+		justify-content: space-between;
+		flex-wrap: nowrap;
+		width: calc(65% - 30px);
+
+		& a {
+			text-decoration: none;
+		}
+	}
+
+	&__link {
+		display: flex;
+		align-items: center;
+		height: 100%;
+		color: #4b2c20;
+
+		transition: color 0.2s linear;
+
+		&:hover {
+			border-bottom: 3px solid #4b2c20;
+			color: hsla(17, 40%, 21%, 0.85);
+		}
+
+		&-mobile {
+			display: none;
+		}
+	}
+}
+
+/**
+
+Breakpoints
+
+*/
+
+@media screen and (max-width: 999px) {
+
+	.navbar__title {
+	
+		width: 315px;
+		padding-right: 30px;
+
+		& p {
+			font-size: 0.9em;
+		}
+	}
+
+	.navbar__links {
+
+		flex-grow: 1;
+		width: unset;
+		font-size: 0.9em;
+	}
+
+}
+
+@media screen and (max-width: 799px) {
+
+	.navbar {
+
+		&__title {
+			padding-right: 60px;
+			width: 345px;
+		}
+
+		&__link-email {
+			display: none;
+		}
+
+		&__link-mobile {
+			display: flex;
+		}
+	}
+
+}
+
+@media screen and (max-width: 599px) {
+
+	.navbar {	
+		&__title {
+			height: unset;
+			min-height: unset;
+
+			.name-container {
+				line-height: 1.5;
+			}
+		}
+	
+		&__link {
+			display: none;
+
+			&s {
+				justify-content: end;
+			}
+	
+			&-mobile {
+	
+				font-size: 24px;
+				display: flex;
+			}
+		}
+	}
+
+}
+
+@media screen and (max-width: 439px) {
+
+	.navbar {
+		justify-content: center;
+	}
+
+	.navbar__title {
+		width: auto;
+		padding-right: 0;
+
+		&-position {
+			display: none;
+		}
+	}
+
+	.navbar__links {
+		display: none;
+	}
+
+}
+
+/**
+
+/// Animations
+
+*/
+
+@keyframes typing {
+  0% {
+    width: 0;
+    border-right: 1px solid black;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes blinking {
+  from, to { border-color: transparent }
+  50% { border-right-color: black}
+}
+
+@keyframes titleChange {
+  from {
+    color: #000000;
+  }
+  to {
+    color: #795548;
+  }
+}
